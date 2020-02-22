@@ -1,0 +1,128 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Jiawei Shan} \hfill \textbf{Homework - \#}   \\
+Email: jwshan@ruc.edu.cn \hfill ID: 2019000151 \\
+\normalsize Course: Linear Model   \hfill Term: Spring 2020\\
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 34
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{34}
+  Let $\mathbf{A}=\left[\begin{array}{cccc}{8} & {4} & {2} & {2} \\ {4} & {4} & {0} & {0} \\ {2} & {0} & {2} & {0} \\ {2} & {0} & {0} & {2}\end{array}\right] \quad$ and $c=\left[\begin{array}{c}{1} \\ {-2} \\ {-1} \\ {4}\end{array}\right]$
+  \begin{enumerate}[a.]
+    \item Show that $\mathbf{c}$ is in $\mathcal{C}(\mathbf{A}) .$ (Find a vector $\mathbf{x}$ such that $\mathbf{A x}=\mathbf{c} .$ )
+    \item Find two different generalized inverses for $\mathbf{A}$.
+    \item For one of your generalized inverses in (b), compute $AA^{g}$
+    \item Is $\mathbf{A} \mathbf{A}^{g}$ from (c) idempotent? Symmetric?
+    \item Show that $\mathbf{A} \mathbf{A}^{g} \mathbf{c}=\mathbf{c}$
+    \item For your two generalized inverses in (b), compute $\mathbf{A}^{g} \mathbf{c}$ and show that each vector solves $\mathbf{A x}=\mathbf{c}$
+  \end{enumerate}
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 49
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{49}
+ Show that $\mathbf{A}\mathbf{A}^{T}$ and $\mathbf{A}^{T}\mathbf{A}$  have the same nonzero eigenvalues.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 73
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{73}
+  Let $\mathbf{V}$ be a symmetric $p \times p$ matrix with eigenvalues $\lambda_{1}, \cdots, \lambda_{p} ;$ show the following:
+  \begin{enumerate}[a.]
+    \item $\left|\mathbf{I}_{p}+t \mathbf{V}\right|=\prod_{i=1}^{p}\left(1+t \lambda_{i}\right)$
+    \item The derivative of $\left|\mathbf{I}_{p}+t \mathbf{V}\right|$ with respect to $t$ is equal to trace$(\mathbf{V})$
+  \end{enumerate}
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 75
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{75}
+  (Binomial inverse theorem) Verify the following for $\mathbf{A},$ B nonsingular:
+  $$
+  (\mathbf{A}+\mathbf{U B V})^{-1}=\mathbf{A}^{-1}-\mathbf{A}^{-1} \mathbf{U B}^{-1}\left(\mathbf{B}^{-1}+\mathbf{V A}^{-1} \mathbf{U}\right)^{-1} \mathbf{B V A}^{-1}
+  $$
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+\noindent\rule{7in}{2.8pt}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[scale=0.25]{q2.png}
+%     \caption{Plot showing $\hat{\phi}$ as a function of time.}
+%     \label{fig_q2l}
+% \end{figure}
+
+% \lstinputlisting{HW6Q2.m}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
