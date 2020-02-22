@@ -1,0 +1,289 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{diagbox} 
+\renewcommand{\P}{\mathbb{P}}
+\renewcommand{\E}{\mathbb{E}}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Cao Jiahao} \hfill \textbf{Homework - 1\#}   \\
+Email: caojiahao13@ruc.edu.cn \hfill ID: 1510010 \\
+\normalsize Course: Bayesian  \hfill Term: Spring 2020\\
+Instructor: Dr. He \hfill Due Date:\ 24:00, $23^{nd}$ February, 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1:2.3}
+Full conditionals: Let $X, Y, Z$ be random variables with joint density (discrete or continuous) $p(x, y, z) \propto f(x, z) g(y, z) h(z) .$ Show that
+
+a) $p(x | y, z) \propto f(x, z),$ i.e. $p(x | y, z)$ is a function of $x$ and $z$
+
+b) $p(y | x, z) \propto g(y, z),$ i.e. $p(y | x, z)$ is a function of $y$ and $z$
+
+c) $X$ and $Y$ are conditionally independent given $Z$
+\end{problem}
+\begin{solution}
+
+a).
+
+$p(x|y,z)=\frac{p(x,y,z)}{\int_{x}p(x,y,z)dx}=\frac{f(x, z) g(y, z) h(z)}{\int_{x}f(x, z) g(y, z) h(z)dx}=\frac{f(x, z)  h(z)}{\int_{x}f(x, z) h(z)dx}\propto f(x,z)$
+
+b).
+
+$p(y|x,z)=\frac{p(x,y,z)}{\int_{y}p(x,y,z)dy}=\frac{f(x, z) g(y, z) h(z)}{\int_{y}f(x, z) g(y, z) h(z)dy}=\frac{ g(y, z) h(z)}{\int_{y} g(y, z) h(z)dy}\propto g(y,z)$
+
+c).
+
+$f(x,y|z)\frac{p(x,y,z)}{\int_{x,y}p(x,y,z)dxdy}=\frac{f(x, z) g(y, z) h(z)}{\int_{x,y}f(x, z) g(y, z) h(z)dxdy}=\frac{f(x, z) g(y, z) }{\int_{x,y}f(x, z) g(y, z)dxdy}\propto f(x, z) g(y, z)$
+
+As the conditional density $f(x,y|z)$ is a product of a funtion of $x$ and a funtion of $y$, $X$ and $Y$ are conditionally independent given $Z$.
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+\begin{problem}{2:2.5}
+Urns: Suppose urn $H$ is filled with $40 \%$ green balls and $60 \%$ red balls, and urn $T$ is filled with $60 \%$ green balls and $40 \%$ red balls. Someone will flip a coin and then select a ball from urn $H$ or urn $T$ depending on whether the coin lands heads or tails, respectively. Let $X$ be 1 or 0 if the coin lands heads or tails, and let $Y$ be 1 or 0 if the ball is green or red.
+
+a) Write out the joint distribution of $X$ and $Y$ in a table.
+
+b) Find $\mathrm{E}[Y] .$ What is the probability that the ball is green?
+
+c) Find $\operatorname{Var}[Y | X=0], \operatorname{Var}[Y | X=1]$ and $\operatorname{Var}[Y] .$ Thinking of variance as measuring uncertainty, explain intuitively why one of these variances is larger than the others.
+
+d) Suppose you see that the ball is green. What is the probability that the coin turned up tails?
+\end{problem}
+\begin{solution}
+
+a).
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\diagbox{Y}{$\mathbb{P}[X,Y]$}{X}& 0 &1 \\\hline
+0 & 0.2 &0.3 \\\hline
+1&0.3 &0.2\\
+\hline
+\end{tabular}
+\end{table}
+
+b).
+
+$\mathbb{E}\left[Y\right] = \mathbb{P}\left[Y=1\right]=0.4*0.5+0.6*0.5=0.5$.
+
+c).
+
+$\mathrm{Var}\left[Y|X=0\right]=0.6*0.4=0.24$
+
+$\mathrm{Var}\left[Y|X=1\right]=0.4*0.6=0.24$
+
+$\mathrm{Var}\left[Y\right]=0.5*0.5=0.25$
+
+$\mathrm{Var}\left[Y\right]$ is larger than the other two. Intuitively, this can be explained as we have more information on $Y$ when $X$ is given, so the uncertainty decreases.
+
+d).
+
+$$\mathbb{P}\left[\text{tail}|\text{green}\right] =\mathbb{P}\left[X=0|Y=1\right]=\frac{0.3}{0.2+0.3}=0.6  $$
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+\begin{problem}{3:2.6}
+Conditional independence: Suppose events $A$ and $B$ are conditionally independent given $C,$ which is written $A \perp B | C .$ Show that this implies that $A^{c} \perp B\left|C, A \perp B^{c}\right| C,$ and $A^{c} \perp B^{c} | C,$ where $A^{c}$ means "not $A . "$ Find an example where $A \perp B | C$ holds but $A \perp B | C^{c}$ does not hold.
+\end{problem}
+\begin{solution}
+
+If $A \perp B | C $, then $$\mathbb{P}\left[A^cB|C\right] = \P\left[B|C\right] - \P\left[AB|C\right]= \P\left[B|C\right] - \P\left[A|C\right]\P\left[B|C\right]=\P\left[A^c|C\right]\P\left[B|C\right]$$
+$$\mathbb{P}\left[AB^c|C\right] = \P\left[A|C\right] - \P\left[AB|C\right]= \P\left[A|C\right] - \P\left[A|C\right]\P\left[B|C\right]=\P\left[A|C\right]\P\left[B^c|C\right]$$
+Thus $A^c \perp B | C $ and $A \perp B^c | C $. Using this result on $A^c \perp B | C $ we have $A^c \perp B^c | C $.
+
+Consider $A=\{\text{It is a cat}\}$, $B=\{\text{It is a dog}\}$, $C=\{\text{It is a bird}\}$. Then $\P\left[A|C\right]=\P\left[B|C\right]=0$ and $\P\left[A|C^c\right]\neq 0, \P\left[B|C^c\right]\neq0$.
+
+$$\P\left[AB|C\right]=\P\left[B|C\right]\P\left[B|C\right]=0$$
+But
+$$\P\left[AB|C^c\right]=0, \P\left[A|C^c\right]\neq0,\P\left[B|C^c\right]\neq0 \Longrightarrow \P\left[AB|C^c\right]\neq \P\left[A|C^c\right]\P\left[B|C^c\right]$$
+
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+\begin{problem}{4:2.7}
+Coherence of bets: de Finetti thought of subjective probability as follows:
+Your probability $p(E)$ for event $E$ is the amount you would be willing to pay or charge in exchange for a dollar on the occurrence of $E .$ In other words, you must be willing to
+
+$\bullet$ give $p(E)$ to someone, provided they give you $\$ 1$ if $E$ occurs;
+
+$\bullet$ take $p(E)$ from someone, and give them $\$ 1$ if $E$ occurs. Your probability for the event $E^{c}=\text{"not E"}$ is defined similarly.
+
+a) Show that it is a good idea to have $p(E) \leq 1$
+
+b) Show that it is a good idea to have $p(E)+p\left(E^{c}\right)=1$
+\end{problem}
+\begin{solution}
+
+a).
+
+If $\P(E)>1$, then i'm willing to give $\P(E)$ for someone but my return($\leq 1$) is also less than $\P(E)$. This is impossible.
+
+So we should always have $\P(E)\leq1$.
+
+b).
+
+Based on above considerations,  the following trade is reasonable: we give $p(E)$ to someone, provided they give us $\$ 1$ if $E$ occurs and we give $p(E^c)$ to someone, provided they give us $\$ 1$ if $E$ does not occur.
+
+We can always get $\$ 1$ so $p(E)+p\left(E^{c}\right)\leq1$.
+
+Also another trade is reasonable: we take $p(E)$ from someone, and give them $\$ 1$ if $E$ occurs and take $p(E^c)$ from someone, and give them $\$ 1$ if $E$ does not occur.
+
+We always pay $\$ 1$ so $p(E)+p\left(E^{c}\right)\geq1$.
+
+Thus $p(E)+p\left(E^{c}\right)=1$.
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+\begin{problem}{5:2.8}
+Interpretations of probability: One abstract way to define probability is via measure theory, in that $\operatorname{Pr}(\cdot)$ is simply a "measure" that assigns mass to various events. For example, we can "measure" the number of times a particular event occurs in a potentially infinite sequence, or we can "measure" our information about the outcome of an unknown event. The above two types of measures are combined in de Finetti's theorem, which tells us that an exchangeable model for an infinite binary sequence $Y_{1}, Y_{2}, \ldots$ is equivalent to modeling the sequence as conditionally i.i.d. given a parameter $\theta,$ where $\operatorname{Pr}(\theta<c)$ represents our information that the long-run frequency of 1 's is less than $c .$ With this in mind, discuss the different ways in which probability could be interpreted in each of the following scenarios. Avoid using the word "probable" or "likely" when describing probability. Also discuss the different ways in which the events can be thought of as random.
+
+a) The distribution of religions in Sri Lanka is $70 \%$ Buddhist, $15 \%$ Hindu,$8 \%$ Christian, and $7 \%$ Muslim. Suppose each person can be identified by a number from 1 to $K$ on a census roll. A number $x$ is to be sampled from $\{1, \ldots, K\}$ using a pseudo-random number generator on a computer. Interpret the meaning of the following probabilities:
+
+i. $\operatorname{Pr}(\text { person } x \text { is Hindu })$
+
+ii. $\operatorname{Pr}(x=6452859)$
+
+ini. $\operatorname{Pr}(\text { Person } x \text { is Hindul } x=6452859)$
+
+b) A quarter which you got as change is to be flipped many times. Interpret the meaning of the following probabilities:
+
+i. $\operatorname{Pr}(\theta, \text { the long-run relative frequency of heads, equals } 1 / 3)$
+
+ii. $\operatorname{Pr}($ the first coin flip will result in a heads)
+
+iii. $\operatorname{Pr}(\text { the first coin flip will result in a heads } | \theta=1 / 3)$
+
+c) The quarter above has been flipped, but you have not seen the outcome. Interpret $\operatorname{Pr}($ the flip has resulted in a heads).
+\end{problem}
+\begin{solution}
+
+a).
+
+i.
+
+- Our belief about the person in Sri Lanka selected by the pseudo-random number generator is a Hindu.
+
+- proportion of number of times that select a person by the pseudo-random number generator in Sri Lanka and he/she is Hindu in a potentially infinite sequence.
+
+The event is random because we do not know the outcome of the pseudo-random number generator and which religions the selected person believes. 
+
+ii.
+
+- Our belief about we will get 6452859 in a sampling.
+
+- proportion of number of times that we select 6452859 in a potentially infinite sequence of sampling.
+
+The event is random because we do not know the outcome of the pseudo-random number generator.
+
+iii.
+
+- Our belief about person 6452859 is Hindu.
+
+- proportion of number of times that given we get 6452859, the person 6452859 is Hindu in a potentially infinite sequence.
+
+The event is random because we do not know which religion the person who is identified by 6452859  believes. 
+
+b).
+
+i.
+
+- Our belief about the long-run relative frequency of heads is $1/3$.
+
+- proportion of number of times that the long-run relative frequency of heads is $1/3$ in a potentially infinite sequence.
+
+The event is random because we do not know how does the coin behave.
+
+ii.
+
+- Our belief about the first coin flip will result in a heads.
+
+- proportion of number of times that the first coin flip will result in a heads in a potentially infinite sequence.
+
+The event is random because we do not know how does the coin behave and what we will get after the first flip.
+
+iii.
+
+- Our belief about the first coin flip will result in a heads when we believe the long-run relative frequency of heads is $1/3$.
+
+- proportion of number of times that the first coin flip will result in a heads in a potentially infinite sequence given the long-run relative frequency of heads is $1/3$.
+
+The event is random because we do not know what we will get after the first flip.
+
+c).
+
+Whether one have seen the outcome should bring no difference.
+
+So it can be interpreted as our belief about the first coin flip will result in a heads or proportion of number of times that the first coin flip will result in a heads in a potentially infinite sequence.
+
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+\end{document}
+ 
