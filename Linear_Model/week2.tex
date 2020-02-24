@@ -1,0 +1,130 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Tao Li} \hfill \textbf{Homework02}   \\
+Email: 2019000153lt@ruc.edu.cn \hfill ID: 2019000153 \\
+\normalsize Course: Linear Model   \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2.24
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{2.24}
+  Using the tools outlined in the two exercises above, for a design matrix $\mathbf{X}$ we can construct a sequence of Householder 
+  matrices $\mathbf{U}_1,...,\mathbf{U}_p$ following (2.13) and (2.14) such that 
+  $$\mathbf{U}_p...\mathbf{U}_2\mathbf{U}_1\mathbf{X}=\left[\begin{array}{c}{\mathbf{R}} \\{\mathbf{0}}\end{array}\right]$$
+  where $\mathbf{R}$ is square and upper triangular.
+  \begin{enumerate}[a.]
+    \item Show that $\mathbf{U}_p...\mathbf{U}_2\mathbf{U}_1\mathbf{X}$ is an orthogonal matrix.
+    \item Show that $\mathbf{R^TR = X^TX}$.(Note that $\mathbf{R}$ constructed this way may differ from Gram–Schmidt by signs.)
+  \end{enumerate}
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3.2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{3.2}
+  Prove the converse to Result 3.2: if the least squares estimator $\lambda^T \mathbf{\hat{b}}$ is the same for 
+  all solutions $\mathbf{\hat{b}}$ to the normal equations, then $\lambda^T \mathbf{b}$ is estimable.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3.6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{3.6}
+  Recall the two-way crossed problem in Section 3.5. 
+  \begin{enumerate}[a.]
+    \item Show that $\mathbf{G}^T$ is a generalized inverse for $\mathbf{X^TX}$,and then compute both $\mathbf{\left(X^TX\right)G^T}$ and $\mathbf{I-G\left(X^TX\right)}$.
+    \item Find the solution $\mathbf{GX^Ty}$ to the normal equations. Also compute the solution $\mathbf{G^TX^Ty}$.
+    \item Find the least squares estimators for the following estimable functions:
+    \begin{itemize}
+      \item $\mu+\alpha_{i}+\beta_{j}$
+      \item $\alpha_{i}-\alpha_{k}$
+      \item $\beta_{j}-\beta_{k}$
+      \item $\sum d_{i} \alpha_{i}$ with $\sum d_{i}=0$
+      \item $\sum f_{j} \beta_{j}$ with $\sum f_{j}=0$
+    \end{itemize} 
+  \end{enumerate}
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3.11(e)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{3.11(e)}
+  Consider the following two-way crossed ANOVA model with interaction and replication:
+  $$
+  y_{ijk}=\mu+\alpha_{i}+\beta_{j}+\gamma_{ij}+e_{ijk}
+  $$
+  for $i = 1,...,a$,$j = 1,...,b$, and $k = 1,...,n_{ij} \geq 1$.First simplify matters with $a = 2, b = 3$, and $n_{ij} = n$.
+  \begin{enumerate}[a.]
+    \item Write this as a linear model by writing $\mathbf{Xb}$.
+    \item Find $rank(\mathbf{X}) = r$.
+    \item Find a set of $r$ linearly independent estimable functions.
+    \item Give a set of $p - r$ jointly nonestimable functions.
+  \end{enumerate}
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+\noindent\rule{7in}{2.8pt}
+\end{document}
