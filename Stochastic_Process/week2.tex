@@ -1,0 +1,225 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{bm}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Tao Li} \hfill \textbf{Homework02}   \\
+Email: 2019000153lt@ruc.edu.cn \hfill ID: 2019000153 \\
+\normalsize Course: Stochastic Processes \hfill Term: Spring 2020\\
+% Instructor: Dr. Sriram \hfill Due Date: $22^{nd}$ November, 2019 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1.14
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.14}
+    Do the following Markov chains converge to equilibrium?
+    \begin{center}
+        $
+         \begin{matrix}
+            (a) & \bm{1} & \bm{2} & \bm{3} & \bm{4} \\
+            \bm{1} & 0 & 0 & 1 & 0 \\
+            \bm{2} & 0 & 0 & .5 & .5 \\
+            \bm{3} & .3 & .7 & 0 & 0\\
+            \bm{4} & 1 & 0 & 0 & 0
+        \end{matrix}
+        \qquad
+        \begin{matrix}
+            (a) & \bm{1} & \bm{2} & \bm{3} & \bm{4} \\
+            \bm{1} & 0 & 1 & .0 & 0 \\
+            \bm{2} & 0 & 0 & 0 & 1 \\
+            \bm{3} & 1 & 0 & 0 & 0\\
+            \bm{4} & 1/3 & 0 & 2/3 & 0
+        \end{matrix}
+        $
+    \end{center}
+
+    \begin{center}
+        $       
+       \begin{matrix}
+           (c) & \bm{1} & \bm{2} & \bm{3} & \bm{4} & \bm{5} & \bm{6}\\
+           \bm{1} & 1 & .5 & .5 & 0 & 0 & 0\\
+           \bm{2} & 0 & 0 & 0 & 1 & 0 & 0\\
+           \bm{3} & 0 & 0 & 0 & .4 & 0 & .6\\
+           \bm{4} & 1 & 0 & 0 & 0 & 0 & 0\\
+           \bm{5} & 0 & 1 & 0 & 0 & 0 & 0\\
+           \bm{6} & .2 & 0 & 0 & 0 & .8 & 0
+           \end{matrix}
+           $
+   \end{center}
+\end{problem}
+\begin{solution}   
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1.37
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.37}
+    An individual has three umbrellas, some at her office, and some at home. 
+    If she is leaving home in the morning (or leaving work at night) and it is raining, she will take an umbrella, 
+    if one is there.Otherwise, she gets wet. Assume that independent of the past, it rains on each trip with probability 0.2.
+    To formulate a Markov chain,let $X_n$ be the number of umbrellas at her current location. 
+    (a) Find the transition probability for this Markov chain.(b) Calculate the limiting fraction of time she gets wet.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1.41
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.41}
+    \textit{Reflecting random walk on the line} .Consider the points 1, 2, 3, 4 to be marked on a straight line. 
+    Let $X_n$ be a Markov chain that moves to the right with probability 2/3 and to the left with probability 1/3,
+    but subject this time to the rule that if $X_n$ tries to go to the left from 1 or to the right from 4 it stays put.
+    Find (a) the transition probability for the chain, and (b) the limiting amount of time the chain spends at each site. 
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1.44
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.44}
+    \textit{Landscape dynamics} .To make a crude model of a forest we might introduce states 0 = grass, 1 = bushes, 
+    2 = small trees, 3 = large trees, and write down a transition matrix like the following:
+    \begin{center}
+        $       
+       \begin{matrix}
+             & \bm{0} & \bm{1} & \bm{2} & \bm{3} \\
+           \bm{0} & 1/2 & 1/2 & 0 & 0 \\
+           \bm{1} & 1/24 & 7/8 & 1/12 & 0 \\
+           \bm{2} & 1/36 & 0 & 8/9 & 1/12 \\
+           \bm{3} & 1/8 & 0 & 0 & 7/8 
+           \end{matrix}
+           $
+   \end{center}
+   The idea behind this matrix is that if left undisturbed a grassy area 
+   will see bushes grow, then small trees, which of course grow into large trees. 
+   However, disturbances such as tree falls or fires can reset the system to state 0. 
+   Find the limiting fraction of land in each of the states.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1.45
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.45}
+    Consider a general chain with state space $S$ = {1, 2} and write the transition probability as
+    \begin{center}
+        $       
+       \begin{matrix}
+             & \bm{1} & \bm{2} \\
+           \bm{1} & 1-a & a \\
+           \bm{2} & b & 1-b 
+           \end{matrix}
+           $
+   \end{center}
+   Use the Markov property to show that
+   $$P\left(X_{n+1}=1\right)-\frac{b}{a+b}=(1-a-b)\left\{P\left(X_{n}=1\right)-\frac{b}{a+b}\right\}$$
+   and then conclude
+   $$P\left(X_{n}=1\right)=\frac{b}{a+b}+(1-a-b)^n\left\{P\left(X_{0}=1\right)-\frac{b}{a+b}\right\}$$
+   This shows that if $0 < a + b < 2$,then $P(X_n = 1)$ converges exponentially fast to its limiting value $b/(a + b)$.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1.46
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.46}
+    \textit{Bernoulli–Laplace model of diffusion}. Consider two urns each of which contains $m$ balls;
+     $b$ of these $2m$ balls are black, and the remaining $2m − b$ are white. 
+     We say that the system is in state $i$ if the first urn contains $i$ black balls and $m − i$ white balls 
+     while the second contains $b − i$ black balls and $m − b + i$ white balls. 
+     Each trial consists of choosing a ball at random from each urn and exchanging the two. 
+     Let $X_n$ be the state of the system after $n$ exchanges have been made. $X_n$ is a Markov chain.
+     (a) Compute its transition probability. (b) Verify that the stationary distribution is given by
+    $$
+        \pi(i)=\left. \binom{b}{i}\binom{2m-b}{m-i} \middle/ \binom{2m}{m} \right.
+    $$
+    (c) Can you give a simple intuitive explanation why the formula in (b) gives the right answer?
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1.47
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.47}
+    \textit{Library chain}.On each request the $i$th of $n$ possible books is the one chosen with probability $p_i$. 
+    To make it quicker to find the book the next time, the librarian moves the book to the left end of the shelf.
+    Define the state at any time to be the sequence of books we see as we examine the shelf from left to right. 
+    Since all the books are distinct this list is a permutation of the set $\{1, 2, . . . n\}$, i.e., each number is listed exactly once.
+    Show that
+    $$
+\pi(i_1, \ldots, i_n)=p_{i_1} \cdot \frac{p_{i_2}}{1-p_{i_1}} \cdot \frac{p_{i_3}}{1-p_{i_1}-p_{i_2}} \cdots \frac{p_{i_n}}{1-p_{i_1}-\cdots p_{i_{n-1}}}
+$$
+is a stationary distribution.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
