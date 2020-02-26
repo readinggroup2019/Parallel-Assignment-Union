@@ -1,0 +1,204 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+
+\renewcommand{\qed}{\quad\qedsymbol}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Yinqiao Yan} \hfill \textbf{Homework - 1}   \\
+Email: yanyinqiao007@163.com \hfill ID: 2019000156 \\
+\normalsize Course: Bayesian Statistics \hfill Term: Spring 2020\\
+Instructor: Xiangyu Luo, Shiyuan He \hfill Due Date: $23^{rd}$ February, 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{3.5}
+Mixtures of conjugate priors: Let $p(y | \phi)=c(\phi) h(y) \exp \{\phi t(y)\}$ be an exponential family model and let $p_{1}(\phi), \ldots, p_{K}(\phi)$ be $K$ different members of the conjugate class of prior densities given in Section 3.3. A mixture of conjugate priors is given by $\tilde{p}(\theta)=\sum_{k=1}^{K} w_{k} p_{k}(\theta),$ where the $w_{k}$'s are all greater than zero and $\left.\sum w_{k}=1 \text { (see also Diaconis and Ylvisaker }(1985)\right)$.
+\begin{enumerate}[leftmargin=*, parsep=0pt,itemsep=0pt, topsep=0pt]
+	\item [a)] Identify the general form of the posterior distribution of $\theta,$ based on $n$ i.i.d. samples from $p(y | \theta)$ and the prior distribution given by $\tilde{p}$.
+	\item[b)] Repeat a) but in the special case that $p(y | \theta)=\operatorname{dpois}(y, \theta)$ and $p_{1}, \ldots, p_{K}$ are gamma densities.
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.7}
+Posterior prediction: Consider a pilot study in which $n_{1}=15$ children enrolled in special education classes were randomly selected and tested for a certain type of learning disability. In the pilot study, $y_{1}=2$ children tested positive for the disability.
+\begin{enumerate}[leftmargin=*, parsep=0pt,itemsep=0pt, topsep=0pt]
+	\item [a)] Using a uniform prior distribution, find the posterior distribution of
+	$\theta,$ the fraction of students in special education classes who have the disability. Find the posterior mean, mode and standard deviation of
+	$\theta,$ and plot the posterior density.
+\end{enumerate}
+Researchers would like to recruit students with the disability to participate in a long-term study, but first they need to make sure they can recruit enough students. Let $n_{2}=278$ be the number of children in special education classes in this particular school district, and let $Y_{2}$ be the number of students with the disability.
+\begin{enumerate}[leftmargin=*, parsep=0pt,itemsep=0pt, topsep=0pt]
+	\item [b)] Find $\operatorname{Pr}\left(Y_{2}=y_{2} | Y_{1}=2\right),$ the posterior predictive distribution of $Y_{2}$
+	as follows:
+	\begin{enumerate}[leftmargin=*, parsep=0pt,itemsep=0pt, topsep=0pt]
+		\item [i.] Discuss what assumptions are needed about the joint distribution
+		of $\left(Y_{1}, Y_{2}\right)$ such that the following is true:
+		$$
+		\operatorname{Pr}\left(Y_{2}=y_{2} | Y_{1}=2\right)=\int_{0}^{1} \operatorname{Pr}\left(Y_{2}=y_{2} | \theta\right) p\left(\theta | Y_{1}=2\right) d \theta
+		$$
+		\item[ii.] Now plug in the forms for $\operatorname{Pr}\left(Y_{2}=y_{2} | \theta\right)$ and $p\left(\theta | Y_{1}=2\right)$ in the above integral.
+		\item[iii.] Figure out what the above integral must be by using the calculus result discussed in Section 3.1.
+		
+	\end{enumerate}
+
+	\item[c)] Plot the function $\operatorname{Pr}\left(Y_{2}=y_{2} | Y_{1}=2\right)$ as a function of $y_{2} .$ Obtain the mean and standard deviation of $Y_{2},$ given $Y_{1}=2$.
+	\item[d)] The posterior mode and the MLE (maximum likelihood estimate; see Exercise $3.14)$ of $\theta,$ based on data from the pilot study, are both $\hat{\theta}=2 / 15 .$ Plot the distribution $\operatorname{Pr}(Y_{2}=y_{2} | \theta=\hat{\theta}),$ and find the mean and standard deviation of $Y_{2}$ given $\theta=\hat{\theta} .$ Compare these results to the plots and calculations in c) and discuss any differences. Which distribution for $Y_{2}$ would you use to make predictions, and why?
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+...	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.8}
+Coins: Diaconis and Ylvisaker ( 1985) suggest that coins spun on a flat surface display long-run frequencies of heads that vary from coin to coin. About $20 \%$ of the coins behave symmetrically, whereas the remaining coins tend to give frequencies of $1 / 3$ or $2 / 3$
+
+\begin{enumerate}[leftmargin=*, parsep=0pt,itemsep=0pt, topsep=0pt]
+	\item [a)] Based on the observations of Diaconis and Ylvisaker, use an appropriate mixture of beta distributions as a prior distribution for $\theta,$ the long-run frequency of heads for a particular coin. Plot your prior.
+	\item[b)] Choose a single coin and spin it at least 50 times. Record the number of heads obtained. Report the year and denomination of the coin.
+	\item[c)] Compute your posterior for $\theta,$ based on the information obtained in $b)$.
+	\item[d)] Repeat b) and $c$ ) for a different coin, but possibly using a prior for $\theta$ that includes some information from the first coin. Your choice of a new prior may be informal, but needs to be justified. How the results from the first experiment influence your prior for the $\theta$ of the second coin may depend on whether or not the two coins have the same denomination, have a similar year, etc. Report the year and denomination of this coin.
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.9}
+Galenshore distribution: An unknown quantity $Y$ has a Galenshore$(a,\theta)$ distribution if its density is given by
+$$
+p(y)=\frac{2}{\Gamma(a)} \theta^{2 a} y^{2 a-1} e^{-\theta^{2} y^{2}}
+$$
+for $y>0, \theta>0$ and $a>0 .$ Assume for now that $a$ is known. For this density,
+$$
+\mathrm{E}[Y]=\frac{\Gamma(a+1 / 2)}{\theta \Gamma(a)}, \quad \mathrm{E}\left[Y^{2}\right]=\frac{a}{\theta^{2}}.
+$$
+\begin{enumerate}[leftmargin=*, parsep=0pt,itemsep=0pt, topsep=0pt]
+	\item [a)] Identify a class of conjugate prior densities for $\theta .$ Plot a few members of this class of densities.
+	\item[b)] Let $Y_{1}, \ldots, Y_{n} \sim$ i.i.d. Galenshore $(a, \theta) .$ Find the posterior distribution of $\theta$ given $Y_{1}, \ldots, Y_{n},$ using a prior from your conjugate class.
+	\item[c)] Write down $p\left(\theta_{a} | Y_{1}, \ldots, Y_{n}\right) / p\left(\theta_{b} | Y_{1}, \ldots, Y_{n}\right)$ and simplify. Identify a sufficient statistic.
+	\item[d)] Determine $\mathrm{E}[\theta | y_{1}, \ldots, y_{n}]$.
+	\item[e)] Determine the form of the posterior predictive density $p(\tilde{y} | y_{1} \ldots, y_{n})$.
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.13}
+Improper Jeffreys' prior: Let $Y \sim \operatorname{Poisson}(\theta)$.
+\begin{enumerate}[leftmargin=*, parsep=0pt,itemsep=0pt, topsep=0pt]
+	\item [a)] Apply Jeffreys' procedure to this model, and compare the result to the family of gamma densities. Does Jeffreys' procedure produce an actual probability density for $\theta ?$ In other words, can $\sqrt{I(\theta)}$ be proportional to an actual probability density for $\theta \in(0, \infty) ?$
+	\item[b)] Obtain the form of the function $f(\theta, y)=\sqrt{I(\theta)} \times p(y | \theta) .$ What probability density for $\theta$ is $f(\theta, y)$ proportional to? Can we think of $f(\theta, y) / \int f(\theta, y) d \theta$ as a posterior density of $\theta$ given $Y=y ?$
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+...
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.14}
+Unit information prior: Let $Y_{1}, \ldots, Y_{n} \sim$ i.i.d. $p(y | \theta) .$ Having observed the values $Y_{1}=y_{1}, \ldots, Y_{n}=y_{n},$ the log likelihood is given by $l(\theta | \boldsymbol{y})=$ $\sum \log p\left(y_{i} | \theta\right),$ and the value $\hat{\theta}$ of $\theta$ that maximizes $l(\theta | \boldsymbol{y})$ is called the maximum likelihood estimator. The negative of the curvature of the loglikelihood, $J(\theta)=-\partial^{2} l(\theta | \boldsymbol{y}) / \partial \theta^{2},$ describes the precision of the MLE $\hat{\theta}$ and is called the observed Fisher information. For situations in which it is difficult to quantify prior information in terms of a probability distribution, some have suggested that the "prior" distribution be based on the likelihood, for example, by centering the prior distribution around the MLE $\hat{\theta} .$ To deal with the fact that the MLE is not really prior information, the curvature of the prior is chosen so that it has only "one $n$ th" as much information as the likelihood, so that $-\partial^{2} \log p(\theta) / \partial \theta^{2}=J(\theta) / n .$ Such a prior is called a unit information prior (Kass and Wasserman, 1995; Kass and Raftery, 1995 ), as it has as much information as the average amount of information from a single observation. The unit information prior is not really a prior distribution, as it is computed from the observed data. However, it can be roughly viewed as the prior information of someone with weak but accurate prior information.
+\begin{enumerate}[leftmargin=*, parsep=0pt,itemsep=0pt, topsep=0pt]
+	\item [a)] Let $Y_{1}, \ldots, Y_{n} \sim$ i.i.d. binary $(\theta) .$ Obtain the MLE $\hat{\theta}$ and $J(\hat{\theta}) / n$.
+	\item[b)] Find a probability density $p_{U}(\theta)$ such that $\log p_{U}(\theta)=l(\theta | \boldsymbol{y}) / n+$
+	c, where $c$ is a constant that does not depend on $\theta .$ Compute the information $-\partial^{2} \log p_{U}(\theta) / \partial \theta^{2}$ of this density.
+	\item[c)] Obtain a probability density for $\theta$ that is proportional to $p_{U}(\theta) \times$ $p\left(y_{1}, \ldots, y_{n} | \theta\right) .$ Can this be considered a posterior distribution for $\theta ?$
+	\item[d)] Repeat a $,$ b) and c) but with $p(y | \theta)$ being the Poisson distribution.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+...
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+ 
