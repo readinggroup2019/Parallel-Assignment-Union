@@ -1,1 +1,1 @@
-# HW_share
+注册Mathpix的邮箱用一个删一个
