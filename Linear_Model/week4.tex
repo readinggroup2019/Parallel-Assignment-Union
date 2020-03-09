@@ -1,0 +1,133 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\renewcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\renewcommand{\Var}{\mathrm{Var}}
+\renewcommand{\Cov}{\mathrm{Cov}}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{...} \hfill \textbf{Homework - 4\#}   \\
+Email: ... \hfill ID: ... \\
+\normalsize ... \hfill ...\\
+Instructor: ...\hfill Due Date:2020-3-15 \\
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.2}
+Let $\mathbf{Z} \sim N_{p}\left(\mathbf{0}, \mathbf{I}_{p}\right),$ and let $\mathbf{A}$ be a $p \times p$ matrix such that $\mathbf{A A}^{T}=\mathbf{V}$.
+
+a. Show that if $\mathbf{Q}$ is an orthogonal matrix, then $\mathbf{Q Z} \sim N_{p}\left(\mathbf{0}, \mathbf{I}_{p}\right)$
+
+b. Show that $(\mathbf{A Q})(\mathbf{A Q})^{T}=\mathbf{V}$
+
+c. Show that $\mathbf{X}=\mu+\mathbf{A Q Z} \sim N_{p}(\mu, \mathbf{V})$
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{5.8}
+(Variation on Result 5.11) Show that if $U \sim \chi_{p}^{2}(\phi),$ then $\operatorname{Pr}(U>c)$ is increasing in $p$ for fixed $\phi \geq 0, c>0$
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{5.14}
+Using the result of Exercise $5.12,$ show that
+
+a. $\operatorname{Var}\left(\mathbf{X}^{T} \mathbf{A X}\right)=2 \operatorname{tr}(\mathbf{A V})^{2}+4 \mu^{T} \mathbf{A V A} \mu$
+
+b. (Easier) If $\mathbf{X} \sim N_{p}(\mathbf{0}, \mathbf{V}),$ then $\operatorname{Var}\left(\mathbf{X}^{T} \mathbf{A} \mathbf{X}\right)=2 \operatorname{tr}(\mathbf{A} \mathbf{V})^{2}$
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{5.15}
+Prove the converse to Result 5.14: Let $\mathbf{X} \sim N_{p}(\mu, \mathbf{V})$ and $\mathbf{A}$ is symmetric; then if $\mathbf{X}^{T} \mathbf{A} \mathbf{X} \sim \chi_{s}^{2}(\phi)$ for some $\phi,$ then $\mathbf{A V}$ is idempotent with rank $s$ .
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{5.24}
+In the normal linear model, that is, $\mathbf{y} \sim N_{N}\left(\mathbf{X b}, \sigma^{2} \mathbf{I}_{N}\right),$ find the conditional distribution of $\mathbf{a}^{T} \mathbf{y}$ given $\mathbf{X}^{T} \mathbf{y} .$ For simplicity, assume that $\mathbf{X}$ has full-column rank.
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+\end{document}
