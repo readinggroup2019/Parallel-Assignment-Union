@@ -1,0 +1,174 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Tao Li} \hfill \textbf{Homework05}   \\
+Email:201900153lt@ruc.edu.cn  \hfill ID: 2019000153\\
+\normalsize Course: Linear Model   \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.1}
+Conditional probability: suppose that if $\theta = 1$, then $y$ has a normal distribution with mean 1 and standard deviation $\sigma$, 
+and if $\theta = 2$, then $y$ has a normal distribution with mean 2 and standard deviation $\sigma$. 
+Also, suppose $\operatorname{Pr}(\theta = 1) = 0.5$ and $\operatorname{Pr}(\theta = 2) = 0.5$.
+
+(a) For $\sigma = 2$, write the formula for the marginal probability density for $y$ and sketch it. 
+
+(b) What is $\operatorname{Pr}(\theta = 1|y = 1)$, again supposing $\sigma = 2$?
+
+(c) Describe how the posterior density of $\theta$ changes in shape as $\sigma$ is increased and as it is decreased.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.2}
+Conditional means and variances: show that (1.8) and (1.9) hold if $u$ is a vector.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.6}
+Conditional probability: approximately 1/125 of all births are fraternal twins and 1/300 of births are identical twins. 
+Elvis Presley had a twin brother (who died at birth). What is the probability that Elvis was an identical twin? 
+(You may approximate the probability of a boy or girl birth as $\frac{1}{2}$.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.7}
+    Conditional probability: the following problem is loosely based on the television game show \textit{Let’s Make a Deal}. 
+    At the end of the show, a contestant is asked to choose one of three large boxes, where one box contains 
+    a fabulous prize and the other two boxes contain lesser prizes. After the contestant chooses a box, Monty Hall, 
+    the host of the show, opens one of the two boxes containing smaller prizes. 
+    (In order to keep the conclusion suspenseful, Monty does not open the box selected by the contestant.)
+     Monty offers the contestant the opportunity to switch from the chosen box to the remaining unopened box. 
+     Should the contestant switch or stay with the original choice? Calculate the probability that 
+     the contestant wins under each strategy. This is an exercise in being clear about the information that 
+     should be conditioned on when constructing a probability judgment. 
+     See Selvin (1975) and Morgan et al. (1991) for further discussion of this problem.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.8}
+Subjective probability: discuss the following statement. ‘The probability of event $E$ is considered “subjective” 
+if two rational persons $A$ and $B$ can assign unequal probabilities to $E$, $P_A(E)$ and $P_B(E)$.
+These probabilities can also be interpreted as “conditional”: $P_A(E) = P(E|I_A)$ and $P_B(E) = P(E|I_B)$, 
+where $I_A$ and $I_B$ represent the knowledge available to persons $A$ and $B$, respectively.’
+ Apply this idea to the following examples.
+
+(a) The probability that a ‘6’ appears when a fair die is rolled, where $A$ observes the outcome of the die roll 
+and $B$ does not.
+
+(b) The probability that Brazil wins the next World Cup, where $A$ is ignorant of soccer and $B$ is a knowledgeable sports fan.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.9}
+Simulation of a queuing problem: a clinic has three doctors. Patients come into the clinic at random, 
+starting at 9 a.m., according to a Poisson process with time parameter 10 minutes: that is, 
+the time after opening at which the first patient appears follows an exponential distribution with expectation 
+10 minutes and then, after each patient arrives, the waiting time until the next patient is independently 
+exponentially distributed, also with expectation 10 minutes. When a patient arrives, he or she waits until a doctor 
+is available. The amount of time spent by each doctor with each patient is a random variable, uniformly distributed 
+between 5 and 20 minutes. The office stops admitting new patients at 4 p.m. and closes when the last patient is 
+through with the doctor.
+
+(a) Simulate this process once. How many patients came to the office? How many had to wait for a doctor? What was their average wait? When did the office close?
+
+(b) Simulate the process 100 times and estimate the median and $50\%$ interval for each of the summaries in (a). 
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+\end{document}
