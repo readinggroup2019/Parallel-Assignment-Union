@@ -1,0 +1,118 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{bm}
+
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{xx} \hfill \textbf{Homework - 5}   \\
+Email: xxx \hfill ID: xxx \\
+%\normalsize Course: Stochastic Processes \hfill Term: Spring 2020\\
+%Instructor: Zheng Zhang, Wenlin Dai \hfill Due Date: $17^{th}$ March, 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.2}
+Five white balls and five black balls are distributed in two urns in such a
+way that each urn contains five balls. At each step we draw one ball from each
+urn and exchange them. Let $X_n$ be the number of white balls in the left urn at
+time $n$. Compute the transition probability for $X_n$.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.4}
+The 1990 census showed that 36\% of the households in the District of
+Columbia were homeowners while the remainder were renters. During the next
+decade 6\% of the homeowners became renters and 12\% of the renters became
+homeowners. What percentage were homeowners in 2000? in 2010?
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.5}
+Consider a gambler’s ruin chain with $N = 4$. That is, if $1\le i \le3$, $p(i, i + 1) = 0.4,\ \text{and } p(i, i - 1) = 0.6$, but the endpoints are absorbing states:
+$p(0, 0) = 1$ and $p(4, 4) = 1$. Compute $p^3(1, 4)$ and $p^3(1, 0)$.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.7}
+Suppose that the probability it rains today is 0.3 if neither of the last two
+days was rainy, but 0.6 if at least one of the last two days was rainy. Let the
+weather on day $n$, $W_n$, be $R$ for rain, or $S$ for sun. Wn is not a Markov chain,
+but the weather for the last two days $X_n = (W_n-1,W_n)$ is a Markov chain
+with four states $\{RR,RS, SR, SS\}$. (a) Compute its transition probability. (b)
+Compute the two-step transition probability. (c) What is the probability it will
+rain on Wednesday given that it did not rain on Sunday or Monday.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
