@@ -1,0 +1,147 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Jiawei Shan} \hfill \textbf{Homework - 6}   \\
+Email: jwshan@ruc.edu.cn \hfill ID: 2019000151 \\
+\normalsize Course: Bayesian \hfill Term: Spring 2020\\
+Instructor: Dr. Luo  \hfill Due Date: $1^{st}$ Apr., 2020 \\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.5}
+   Posterior distribution as a compromise between prior information and data: let $y$ be the number of heads in $n$ spins of a coin, whose probability of heads is $\theta$\\
+  (a) If your prior distribution for $\theta$ is uniform on the range [0,1] , derive your prior predictive distribution for $y$
+  $$
+  \operatorname{Pr}(y=k)=\int_{0}^{1} \operatorname{Pr}(y=k | \theta) d \theta
+  $$
+  for each $k=0,1, \ldots, n$\\
+  (b) Suppose you assign a Beta( $\alpha, \beta$ ) prior distribution for $\theta$, and then you observe $y$ heads out of $n$ spins. Show algebraically that your posterior mean of $\theta$ always lies between your prior mean, $\frac{\alpha}{\alpha+\beta},$ and the observed relative frequency of heads, $\frac{y}{n}$\\
+  (c) Show that, if the prior distribution on $\theta$ is uniform, the posterior variance of $\theta$ is always less than the prior variance.\\
+  (d) Give an example of a Beta$(\alpha, \beta)$ prior distribution and data $y, n,$ in which the posterior variance of $\theta$ is higher than the prior variance.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.6}
+  Predictive distributions: Derive the mean and variance (2.17) of the negative binomial
+  predictive distribution for the cancer rate example, using the mean and variance formulas
+  (1.8) and (1.9).
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.7}
+  Noninformative prior densities:\\
+  (a) For the binomial likelihood, $y \sim \operatorname{Bin}(n, \theta),$ show that $p(\theta) \propto \theta^{-1}(1-\theta)^{-1}$ is the uniform prior distribution for the natural parameter of the exponential family.\\
+  (b) Show that if $y=0$ or $n,$ the resulting posterior distribution is improper.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{problem}{2.12}
+Jeffreys' prior distributions: suppose $y | \theta \sim$ Poisson$(\theta) .$ Find Jeffreys' prior density for $\theta$ and then find $\alpha$ and $\beta$ for which the Gamma( $\alpha, \beta$ ) density is a close match to Jeffreys' density.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{2.16}
+  Beta-binomial distribution and Bayes' prior distribution: suppose $y$ has a binomial distribution for given $n$ and unknown parameter $\theta,$ where the prior distribution of $\theta$ is $\operatorname{Beta}(\alpha, \beta)$\\
+  (a) Find $p(y)$, the marginal distribution of $y,$ for $y=0, \ldots, n$ (unconditional on $\theta$ ). This discrete distribution is known as the beta-binomial, for obvious reasons.\\
+  (b) Show that if the beta-binomial probability is constant in $y,$ then the prior distribution has to have $\alpha=\beta=1$.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{2.20}
+ Censored and uncensored data in the exponential model:\\
+  (a) Suppose $y | \theta$ is exponentially distributed with rate $\theta,$ and the marginal (prior) distribution of $\theta$ is $\operatorname{Gamma}(\alpha, \beta) .$ Suppose we observe that $y \geq 100,$ but do not observe the exact value of $y .$ What is the posterior distribution, $p(\theta | y \geq 100),$ as a function of $\alpha$ and $\beta ?$ Write down the posterior mean and variance of $\theta$\\
+  (b) In the above problem, suppose that we are now told that $y$ is exactly $100 .$ Now what are the posterior mean and variance of $\theta ?$\\
+  (c) Explain why the posterior variance of $\theta$ is higher in part (b) even though more information has been observed. Why does this not contradict identity ( 2.8 ) on page
+  $32 ?$
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
