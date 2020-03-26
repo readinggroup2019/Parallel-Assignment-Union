@@ -1,0 +1,161 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{hhhhhhh} \hfill \textbf{Homework - 6}   \\
+Email: ????? \hfill ID:2019000xxx \\
+\normalsize Course:Stochastic Processes \hfill Term: Spring 2020\\
+%Instructor: Dr. He \hfill Due Date: $8^{th}$ Mar., 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{1.15}
+Find $\lim_{n\rightarrow \infty}p^n(i,j)$ for
+
+ $$
+\begin{array}{rrrrrr} & \mathbf{1} & \mathbf{2} & \mathbf{3} & \mathbf{4} & \mathbf{5} \\ \mathbf{1} & 1 & 0 & 0 & 0 & 0 \\ \mathbf{2} & 0 & 2 / 3 & 0 & 1 / 3 & 0 \\ p=\mathbf{3} & 1 / 8 & 1 / 4 & 5 / 8 & 0 & 0 \\ \mathbf{4} & 0 & 1 / 6 & 0 & 5 / 6 & 0 \\ \mathbf{5} & 1 / 3 & 0 & 1 / 3 & 0 & 1 / 3\end{array}
+$$
+
+You are supposed to do this and the next problem by solving equations. How-
+ever you can check your answers by using your calculator to find FRAC($p^{100}$).
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.16}
+
+If we rearrange the matrix for the seven state chain in Example 1.14 we
+get
+$$
+\begin{array}{c|cc|cc|ccc} & \mathbf{2} & \mathbf{3} & \mathbf{1} & \mathbf{5} & \mathbf{4} & \mathbf{6} & \mathbf{7} \\ \hline \mathbf{2} & .2 & .3 & .1 & 0 & .4 & 0 & 0 \\ \mathbf{3} & 0 & .5 & 0 & .2 & .3 & 0 & 0 \\ \hline \mathbf{1} & 0 & 0 & .7 & .3 & 0 & 0 & 0 \\ \mathbf{5} & 0 & 0 & .6 & .4 & 0 & 0 & 0 \\ \hline \mathbf{4} & 0 & 0 & 0 & 0 & .5 & .5 & 0 \\ \mathbf{6} & 0 & 0 & 0 & 0 & 0 & .2 & .8 \\ \mathbf{7} & 0 & 0 & 0 & 0 & 1 & 0 & 0\end{array}
+$$
+
+Find $\lim_{n\rightarrow \infty}p^n(i,j)$ .
+
+
+
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.18}
+
+A sociology professor postulates that in each decade 8$\%$ of women in the work force leave it and 20$\%$ of the women not in it begin to work. Compare the predictions of his model with the following data on the percentage of women working: 43.3$\%$ in 1970, 51.5$\%$ in 1980, 57.5$\%$ in 1990, and 59.8$\%$ in 2000. In the long run what fraction of women will be working?
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.19}
+A rapid transit system has just started operating. In the first month of
+operation, it was found that 25$\%$  of commuters are using the system while 75$\%$ 
+are travelling by automobile. Suppose that each month 10$\%$  of transit users go
+back to using their cars, while 30$\%$  of automobile users switch to the transit
+system. (a) Compute the three step transition probaiblity $p^3$ . (b) What will be the fractions using rapid transit in the fourth month? (c) In the long run?
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.20}
+A regional health study indicates that from one year to the next, 75$\%$ percent of smokers will continue to smoke while 25$\%$ will quit. 8$\%$ of those who stopped smoking will resume smoking while 92$\%$ will not. If 70$\%$ of the population were smokers in 1995, what fraction will be smokers in 1998? in 2005? in the long run?
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{1.21}
+Three of every four trucks on the road are followed by a car, while only one of every five cars is followed by a truck. What fraction of vehicles on the road are trucks?
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+ 
