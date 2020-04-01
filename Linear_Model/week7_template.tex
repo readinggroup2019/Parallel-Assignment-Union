@@ -1,0 +1,124 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+% \usepackage{xeCJK}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Jiawei Shan} \hfill \textbf{Homework - 7}   \\
+Email: jwshan@ruc.edu.cn \hfill ID: 2019000151 \\
+\normalsize Course: Statistics Model \hfill Term: Spring 2020\\
+% Instructor: Dr. He  \hfill Due Date: $23^{th}$ Mar., 2020 \\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{6.11}
+  Consider the simple linear regression problem with $ x_i = i$, and $N = 5$. Find the power of the F-test for testing whether the slope is zero when testing at level $\alpha = 0.05$ and the slope takes values 0.1, 0.2, and 0.3.
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{6.14}
+  (a)Prove the usual Cauchy–Schwarz inequality:
+  \begin{center}
+      $\left(\mathbf{u}^{T} \mathbf{w}\right)^{2} \leq\|\mathbf{u}\| \times\|\mathbf{w}\|$
+  \end{center}
+  by finding the scalar $\alpha$ that minimizes $\|\mathbf{u}-\alpha \mathbf{w}\|^2 $and examining the case where the minimum is zero.
+
+  (b)
+  Obtain the generalized Cauchy–Schwarz inequality (6.25) by applying
+  the same steps to
+  \begin{center}
+      $\left(\mathbf{u}-\alpha \mathbf{A}^{-1} \mathbf{w}\right)^{T} \mathbf{A}\left(\mathbf{u}-\alpha \mathbf{A}^{-1} \mathbf{w}\right)$
+  \end{center}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{6.18}
+  For the one-way ANOVA model with $n_i = n = 5$ and $a = 3$, compute the expected length (or squared length) of simultaneous confidence intervals computed using Bonferroni, Scheffe, and Tukey’s methods for all pairwise differences $\alpha_i-\alpha_k$.
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{}
+In one way ANOVA model, compute $(X^TX+C^TC)^{-1}X^T$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+\noindent\rule{7in}{2.8pt}
+\end{document}
