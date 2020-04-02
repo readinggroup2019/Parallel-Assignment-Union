@@ -1,0 +1,154 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Yonghua Su} \hfill \textbf{Homework - 7}   \\
+Email: 2019000154@ruc.edu.cn \hfill ID: 2019000154 \\
+\normalsize Course: Bayesian \hfill Term: Spring 2020\\
+Instructor: Dr. Luo  \hfill Due Date: $8^{st}$ Apr., 2020 \\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{10.3}
+  Posterior computations for the binomial model: suppose $y_1 ∼ \text{Bin}(n_1, p_1)$ is the number of successfully treated patients under an experimental new drug, and $y_2 ∼ \text{Bin}(n_2,p_2)$
+  is the number of successfully treated patients under the standard treatment. Assume that $y_1$ and $y_2$ are independent and assume independent beta prior densities for the two probabilities of success. 
+  Let $n_1 = 10, y_1 = 6$, and $n_2 = 20, y_2 = 10$. Repeat the following for several different beta prior specifications.
+
+  (a) Use simulation to find a 95\% posterior interval for $p_1 −p_2$ and the posterior probability that $p_1 > p_2$.
+
+  (b) Numerically integrate to estimate the posterior probability that $p_1 > p_2$.
+
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{10.4}
+  Rejection sampling:
+
+  (a) Prove that rejection sampling gives draws from $p(\theta|y)$.
+
+  (b) Why is the boundedness condition on $p(\theta|y)/q(\theta)$ necessary for rejection sampling?
+  
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{11.1}
+  Metropolis-Hastings algorithm: 
+  Show that the stationary distribution for the Metropolis- Hastings algorithm is, in fact, the target distribution, $p(\theta|y)$.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{problem}{11.3}
+  Gibbs sampling: Table 11.4 contains quality control measurements from 6 machines in a factory. 
+  Quality control measurements are expensive and time-consuming, so only 5 measurements were done for each machine. 
+  In addition to the existing machines, we are interested in the quality of another machine (the seventh machine). 
+  Implement a separate, a pooled and hierarchical Gaussian model with common variance described in Section 11.6. 
+  Run the simulations long enough for approximate convergence. Using each of three models—separate, pooled, 
+  and hierarchical—report: 
+  (i) the posterior distribu- tion of the mean of the quality measurements of the sixth machine, 
+  (ii) the predictive distribution for another quality measurement of the sixth machine, and 
+  (iii) the posterior distribution of the mean of the quality measurements of the seventh machine.
+
+  \begin{tabular}{cc} 
+    Machine & Measurements \\
+    \hline 1 & 83,92,92,46,67 \\
+    2 & 117,109,114,104,87 \\
+    3 & 101,93,92,86,67 \\
+    4 & 105,119,116,102,116 \\
+    5 & 79,97,103,79,92 \\
+    6 & 57,92,104,77,100
+    \end{tabular} 
+    
+  Table 11.4: Quality control measurements from 6 machines in a factory.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{11.6}
+  Effective sample size:
+
+  (a) Derive the asymptotic formula (11.5) for the variance of the average of correlated simulations.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
