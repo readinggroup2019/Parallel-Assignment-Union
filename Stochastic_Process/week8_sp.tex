@@ -1,0 +1,209 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+
+
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{*** } \hfill \textbf{Homework - 7}   \\
+Email: ***@ruc.edu.cn \hfill ID: 20190001** \\
+\normalsize Course:Stochastic Processes \hfill Term: Spring 2020\\
+%Instructor: Dr. He \hfill Due Date: $8^{th}$ Mar., 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{2.7}
+	Let $S$ and $T$ be exponentially distributed with rates $\lambda$ and $\mu$. Let $U =
+	\min\{S, T\}$ and $V = \max\{S, T\}$. Find 
+	
+	(a) $\mathbb{E}U$. 
+	
+	(b) $\mathbb{E}(V-U)$, 
+	
+	(c) $\mathbb{E}V$,
+	
+	(d) Use the identity $V = S +T -U$ to get a different looking formula for $\mathbb{E}V$ and verify
+	the two are equal.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.12}
+	A flashlight needs two batteries to be operational. You start with four
+	batteries numbered $1$ to $4$. Whenever a battery fails it is replaced by the lowestnumbered working battery. Suppose that battery life is exponential with mean
+	$100$ hours. Let $T$ be the time at which there is one working battery left and $N$
+	be the number of the one battery that is still good. 
+	
+	(a) Find $\mathbb{E}T$. 
+	
+	(b) Find the distribution of $N$. 
+	
+	(c) Solve (a) and (b) for a general number of batteries.
+\end{problem}
+\begin{solution}
+
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.13}
+A machine has two critically important parts and is subject to three
+different types of shocks. Shocks of type $i$ occur at times of a Poisson process
+with rate $\lambda_i$. Shocks of types $1$ break part $1$, those of type $2$ break part $2$,
+while those of type $3$ break both parts. Let $U$ and $V$ be the failure times of the
+two parts. 
+
+(a) Find $\Pr(U > s, V > t)$. 
+
+(b) Find the distribution of $U$ and the
+distribution of $V$. 
+
+(c) Are $U$ and $V$ independent?
+\end{problem}
+
+\begin{solution}
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.17}
+Let $T_i, i = 1, 2, 3$ be independent exponentials with rate $\lambda_i$. 
+
+(a) Show
+that for any numbers $t_1, t_2, t_3$
+$$\max\{t_1, t_2, t_3\} = t_1 + t_2 + t_3 - \min\{t_1, t_2\} - \min\{t_1, t_3\}
+- \min\{t_2, t_3\} + \min\{t_1, t_2, t_3\}$$
+
+(b) Use (a) to find $\mathbb{E} \max\{T_1, T_2, T_3\}$. 
+
+(c) Use the formula to give a simple
+solution of part (c) of Exercise 2.16.
+
+\end{problem}
+\begin{solution}
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.22}
+	Suppose $N(t)$ is a Poisson process with rate $3$. Let $T_n$ denote the time of
+	the $n$-th arrival. Find 
+	
+	(a) $\mathbb{E}(T_{12})$, 
+	
+	(b) $\mathbb{E}(T_{12}|N(2) = 5)$, 
+	
+	(c) $\mathbb{E}(N(5)|N(2) = 5)$
+\end{problem}
+\begin{solution}
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.29}
+	Consider a Poisson process with rate $\lambda$ and let $L$ be the time of the last arrival in the interval $[0, t]$, with $L = 0$ if there was no arrival. 
+	
+	(a) Compute
+	$\mathbb{E}(t - L)$ 
+	
+	(b) What happens when we let $t\rightarrow\infty$ in the answer to (a)?
+\end{problem}
+\begin{solution}
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{2.31}
+	Customers arrive at a sporting goods store at rate 10 per hour. $60\%$ of
+	the customers are men and $40\%$ are women. Women spend an amount of time
+	shopping that is uniformly distributed on $[0, 30]$ minutes, while men spend an
+	exponentially distributed amount of time with mean $30$ minutes. Let $M$ and
+	$N$ be the number of men and women in the store. What is the distribution of
+	$(M, N)$ in equilibrium.
+\end{problem}
+\begin{solution}
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+ 
