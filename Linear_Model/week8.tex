@@ -1,0 +1,131 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{} \hfill \textbf{Homework - 7}   \\
+Email: @ruc.edu.cn \hfill ID: 201900015X\\
+\normalsize Course: Linear Model \hfill Term: Spring 2020\\
+Instructor: Dr. He  \hfill Due Date: $5^{th}$ Apr., 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{8.1}
+Find the probability that the ANOVA estimator $\hat{\sigma}_{a}^{2}$ from (8.11) is negative when $n_{i}=n=5$ and $a=3,$ with $\sigma_{a}^{2} / \sigma^{2}$ ranging from $1 / 10$ to 2.
+
+\end{problem}
+\begin{solution}
+	
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{8.2}
+Consider the balanced one-way random effects model. Construct a confidence interval for $\sigma_{a}^{2} / \sigma^{2}$ using Equation (8.9).	
+\end{problem}
+\begin{solution}
+	...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{8.6}
+(Neyman and Scott [33] ) Let $Y_{i j}$ iid $N\left(\mu_{i}, \sigma^{2}\right), j=1, \ldots, n$ (balanced) and $i=1, \ldots, k .$ Find the MLEs for $\mu_{i}$ and $\sigma^{2} .$ What is their behavior (mean, variance) when $n$ is fixed and $k \rightarrow \infty ?$
+\end{problem}
+\begin{solution}
+	...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{7.11 (a)(b)(f)(g)(h)}
+In many situations, we assume that a subject responds in a linear way to the dosage level. Consider measuring a response $y_{i j}$ to dosage level $i$ on subject $j, j=1,2$ (balanced, $n_{i}=2$ ), $i=1, \ldots, a=4,$ leading to the familiar one-way ANOVA model:
+$$
+y_{i j}=\mu+\alpha_{i}+e_{i j}(\operatorname{model} 1)
+$$
+Assume, as usual, that $e_{i j}$ are iid $N\left(0, \sigma^{2}\right) .$ We are interested in testing the hypothesis that the response is linear in the dosage, where this reduced model might be written as
+$$
+y_{i j}=\beta_{0}+\beta_{1} x_{i}+e_{i j}(\operatorname{model} 2)
+$$
+where $x_{i}=i, i=1, \ldots, 4$
+
+a. Write out $E(\mathbf{y})=\mathbf{X} \mathbf{b}$ for the full model (model 1 ) by giving $\mathbf{X}$ and $\mathbf{b}$. Also give $\operatorname{rank}(\mathbf{X})$.
+
+b. Write out $E(\mathbf{y})=\mathbf{W} \mathbf{c}$ for the reduced model (model 2 ) by giving $\mathbf{W}$ and
+$\mathbf{c}$. Also give $\operatorname{rank}(\mathbf{W})$.
+
+f. Show that each component of $\mathbf{K}^{T} \mathbf{b}$ is estimable (so that the hypothesis is testable).
+
+g. For the following data, compute $\left(\mathbf{K}^{T} \hat{\mathbf{b}}-\mathbf{m}\right)^{T}\left[\mathbf{K}^{T}\left(\mathbf{X}^{T} \mathbf{X}\right)^{g} \mathbf{K}\right]^{-1}$
+$\left(\mathbf{K}^{T} \hat{\mathbf{b}}-\mathbf{m}\right)$.
+
+h. Give the distribution of $\mathbf{y}^{T}\left(\mathbf{P}_{\mathbf{X}}-\mathbf{P}_{\mathbf{W}}\right) \mathbf{y} / \sigma^{2}$ under both model 1 and model $2 .$
+
+\end{problem}
+\begin{solution}
+	...
+\end{solution} 
+
+
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
