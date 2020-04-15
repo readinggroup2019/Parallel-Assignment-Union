@@ -1,0 +1,136 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Jiawei Shan} \hfill \textbf{Homework 9}   \\
+Email: jwshan@ruc.edu.cn \hfill ID: 2019000151 \\
+\normalsize Course: Bayesian \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{5.5}
+  Mixtures of independent distributions: suppose the distribution of $\theta=\left(\theta_{1}, \ldots, \theta_{J}\right)$ can be written as a mixture of independent and identically distributed components:
+  $$
+  p(\theta)=\int \prod_{j=1}^{J} p\left(\theta_{j} | \phi\right) p(\phi) d \phi
+  $$
+  Prove that the covariances $\operatorname{cov}\left(\theta_{i}, \theta_{j}\right)$ are all nonnegative.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.7}
+  Continuous mixture models:
+  \begin{enumerate}[(a)]
+    \item  If $y | \theta \sim$ Poisson $(\theta),$ and $\theta \sim \operatorname{Gamma}(\alpha, \beta),$ then the marginal (prior predictive) distribution of $y$ is negative binomial with parameters $\alpha$ and $\beta$ (or $p=\beta /(1+\beta)$ ). Use the formulas (2.7) and (2.8) to derive the mean and variance of the negative binomial.
+    \item In the normal model with unknown location and scale $\left(\mu, \sigma^{2}\right),$ the noninformative prior density, $p\left(\mu, \sigma^{2}\right) \propto 1 / \sigma^{2},$ results in a normal-inverse- $\chi^{2}$ posterior distribution for $\left(\mu, \sigma^{2}\right) .$ Marginally then $\sqrt{n}(\mu-\bar{y}) / s$ has a posterior distribution that is $t_{n-1} .$
+    Use (2.7) and (2.8) to derive the first two moments of the latter distribution, stating the appropriate condition on $n$ for existence of both moments.
+  \end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.9}
+Noninformative hyperprior distributions: consider the hierarchical binomial model in Section 5.3. Improper posterior distributions are, in fact, a general problem with hierarchical models when a uniform prior distribution is specified for the logarithm of the population standard deviation of the exchangeable parameters. In the case of the beta population distribution, the prior variance is approximately $(\alpha+\beta)^{-1}$ (see Appendix $A$ ), and so a uniform distribution on $\log (\alpha+\beta)$ is approximately uniform on the log standard deviation. The resulting unnormalized posterior density (5.8) has an infinite integral in the limit as the population standard deviation approaches 0. We encountered the problem again in Section 5.4 for the hierarchical normal model.
+\begin{enumerate}[(a)]
+  \item Show that, with a uniform prior density on $\left(\log \left(\frac{\alpha}{\beta}\right), \log (\alpha+\beta)\right),$ the unnormalized posterior density hasl an infinite integral.
+  \item A simple way to avoid the impropriety is to assign a uniform prior distribution to the standard deviation parameter itself, rather than its logarithm. For the beta population distribution we are considering here, this is achieved approximately by assigning a uniform prior distribution to $(\alpha+\beta)^{-1 / 2} .$ Show that combining this with an independent uniform prior distribution on $\frac{\alpha}{\alpha+\beta}$ yields the prior density ( 5.10 ).
+  \item Show that the resulting posterior density (5.8) is proper as long as $0<y_{j}<n_{j}$ for at least one experiment $j$.
+\end{enumerate}
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.10}
+  Checking the integrability of the posterior distribution: consider the hierarchical normal
+  model in Section 5.4.
+  \begin{enumerate}[(a)]
+    \item  If the hyperprior distribution is $p(\mu, \tau) \propto \tau^{-1}$ (that is, $p(\mu, \log \tau) \propto 1$ ), show that the posterior density is improper.
+    \item If the hyperprior distribution is $p(\mu, \tau) \propto 1,$ show that the posterior density is proper
+    if $J>2$.
+    \item  How would you analyze SAT coaching data if $J=2$ (that is, data from only two schools)?
+  \end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.12}
+  Conditional posterior means and variances: derive analytic expressions for $\mathrm{E}\left(\theta_{j} | \tau, y\right)$ and $\operatorname{var}\left(\theta_{j} | \tau, y\right)$  in the hierarchical normal model (and used in Figures 5.6  and  5.7).\\
+   (Hint:  use (2.7) and (2.8), averaging over $\mu .$ )
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
