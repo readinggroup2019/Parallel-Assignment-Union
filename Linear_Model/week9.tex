@@ -1,0 +1,123 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{xxx} \hfill \textbf{Homework - 9}   \\
+Email: xxx \hfill ID: xxx \\
+\normalsize Course: Statistical Models II \hfill Term: Spring 2020\\
+%Instructor: Shiyuan He, Wei Ma \hfill Due Date: $18^{th}$ Apr., 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{8.13}
+A study of student performance may follow a balanced two-way nested model
+$$
+y_{i j k}=\mu+\alpha_{i}+\beta_{i j}+e_{i j k}, i=1, \ldots, a ; j=1, \ldots, b ; k=1, \ldots, c
+$$
+where $i$ may represent schools, $j$ teachers within a school, and $k$ individual students. The standard sums of squares decomposition follows:
+$$
+\begin{aligned}
+S S A &=\sum_{i} b c\left(y_{i . .}-\bar{y}_{. .}\right)^{2} \\
+S S B(A) &=\sum_{i} \sum_{j} c\left(y_{i j .}-\bar{y}_{i . .}\right)^{2}, \text { and } \\
+S S E &=\sum_{i} \sum_{j} \sum_{k}\left(y_{i j k}-\bar{y}_{i j .}\right)^{2}
+\end{aligned}
+$$
+Use the tools outlined in Section 8.2 for the following problems.
+
+a. Derive (show the steps, fill in the degrees of freedom, $d f$ ) the following expected mean squares where all three effects are random, that is, $\alpha_{i} i i d N\left(0, \sigma_{a}^{2}\right), \beta_{i j} i i d N\left(0, \sigma_{b}^{2}\right),$ and $e_{i j k} i i d N\left(0, \sigma^{2}\right),$ and all three $\alpha_{i}$
+$\bar{\beta}_{i j},$ and $e_{i j k}$ mutually independent:
+$$
+\begin{aligned}
+E(S S A / d f) &=\sigma^{2}+c \sigma_{b}^{2}+b c \sigma_{a}^{2} \\
+E(S S B(A) / d f) &=\sigma^{2}+c \sigma_{b}^{2} \\
+E(S S E / d f) &=\sigma^{2}
+\end{aligned}
+$$
+
+b. Derive the distribution of an appropriate test statistic for testing the hypothesis $H: \sigma_{a}^{2}=0$
+
+c. If $\alpha_{i}$ were fixed, and the other two effects random, derive the expected mean squares for the same three sums of squares.
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{8.17}
+Fill in the missing algebra from Equation(8.26) to finding the BLUP for forecasting $y_{*}$ in Equation (8.27).
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{8.18}
+Show that variance of the BLUP in Equation (8.27) is 
+$$\omega^T(\Omega^{-1}-\Omega^{-1}X(X^T\Omega^{-1}X)^gX^T\Omega^{-1})\omega+x_{*}^T(X^T\Omega^{-1}X)^gx_{*}$$
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
