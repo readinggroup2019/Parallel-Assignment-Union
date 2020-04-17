@@ -1,0 +1,149 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{xx} \hfill \textbf{Homework - 9}   \\
+Email: veralevel@ruc.edu.cn \hfill ID: 20190001XX \\
+\normalsize Course: Stochastic Processes \hfill Term: Spring 2020\\
+%Instructor: Dr. Sriram \hfill Due Date: $22^{nd}$ November, 2019 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{4.2}
+A small computer store has room to display up to 3 computers for sale. Customers come at times of a Poisson process with rate 2 per week to buy a computer and will buy one if at least 1 is available. When the store has only 1 computer left it places an order for 2 more computers. The order takes an exponentially distributed amount of time with mean 1 week to arrive. Of course, while the store is waiting for delivery, sales may reduce the inventory to 1 and then to 0. (a) Write down the matrix of transition rates $Q_{ij}$ and solve $\pi Q = 0$ to find the stationary distribution. (b) At what rate does the store make sales?
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.3}
+Consider two machines that are maintained by a single repairman. Machine i functions for an exponentially distributed amount of time with rate $\lambda_i$ before it fails. The repair times for each unit are exponential with rate $\mu_i$. They are repaired in the order in which they fail. (a) Formulate a Markov chain model for this situation with state space $\{0, 1, 2, 12, 21\}$. (b) Suppose that $\lambda_1 = 1, \mu_1 = 2, \lambda_2 = 3, \mu_2 = 4$. Find the stationary distribution.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.4}
+Consider the set-up of the previous problem but now suppose machine 1 is much more important than 2, so the repairman will always service 1 if it is broken. (a) Formulate a Markov chain model for the this system with state space $\{0, 1, 2, 12\}$ where the numbers indicate the machines that are broken at the time. (b) Suppose that $\lambda_1 = 1, \mu_1 = 2, \lambda_2 = 3, \mu_2 = 4$. Find the stationary distribution.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.5}
+Two people are working in a small office selling shares in a mutual fund. Each is either on the phone or not. Suppose that salesman i is on the phone for an exponential amount of time with rate $\mu_i$ and then off the phone for an exponential amount of time with rate $\lambda_i$. (a) Formulate a Markov chain model for this system with state space $\{0, 1, 2, 12\}$ where the state indicates who is on the phone. (b) Find the stationary distribution.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.10}
+A machine is subject to failures of types $i = 1, 2, 3$ at rates $\lambda_i$ and a failure of type i takes an exponential amount of time with rate $\mu_i$ to repair. Formulate a Markov chain model with state space $\{0, 1, 2, 3\}$ and find its stationary distribution.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.11}
+Solve the previous problem in the concrete case $\lambda_1 = 1/24, \lambda_2 = 1/30, \lambda_3 =1/84,\mu_1 =1/3,\mu_2 =1/5$,and $ \mu_3 =1/7.$
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.12}
+Three frogs are playing near a pond. When they are in the sun they get too hot and jump in the lake at rate 1. When they are in the lake they get too cold and jump onto the land at rate 2. Let $X_t$ be the number of frogs in the sun at time t. (a) Find the stationary distribution for $X_t$. (b) Check the answer to (a) by noting that the three frogs are independent two-state Markov chains.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+ 
