@@ -1,0 +1,206 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Maoyu Zhang} \hfill \textbf{Homework - 9}   \\
+Email: 2019000157@ruc.edu.cn \hfill ID: 2019000157 \\
+\normalsize Course: Stochastic Processes \hfill Term: Spring 2020\\
+%Instructor: Dr. Sriram \hfill Due Date: $22^{nd}$ November, 2019 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{4.13}
+There are 15 lily pads and 6 frogs. Each frog at rate 1 gets the urge to jump and when it does, it moves to one of the 9 vacant pads chosen at random. Find the stationary distribution for the set of occupied lily pads.
+
+
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.27}
+We now take a different approach to analyzing the Duke Basketball chain, Example 4.11.
+
+$$
+\begin{array}{ccccc} 
+& 0 & 1 & 2 & 3 \\
+0 & -3 & 2 & 1 & 0 \\
+1 & 0 & -5 & 5 & 0 \\
+2 & 1 & 0 & -2.5 & 1.5 \\
+3 & 6 & 0 & 0 & -6
+\end{array}
+$$
+
+(a) Find $g(i)=E_{i}\left(V_{1}\right)$ for $i=0,2,3 .$ 
+
+(b) Use the solution to (a) to show that the number of Duke scores (visits to state 1 ) by time $t$ has $N_{1}(t) / t \rightarrow 0.6896$ as computed previously. 
+
+(c) Compute $h(i)=P_{i}\left(V_{3}<V_{1}\right)$ for $i=0,2$ Use this to compute the distribution of $X=$ the number of time UNC scores between successive Duke baskets. (e) Use the solution of (d) to conclude that the number of UNC scores (visits to state 3) by time $t$ has $N_{3}(t) / t \rightarrow 0.6206$ as computed previously.
+
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.28}
+Brad’s relationship with his girl friend Angelina changes between Amorous, Bickering, Confusion, and Depression according to the following transition rates when t is the time in months.
+
+$$
+\begin{array}{ccccc} 
+& \mathbf{A} & \mathbf{B} & \mathbf{C} & \mathbf{D} \\
+\mathbf{A} & -4 & 3 & 1 & 0 \\
+\mathbf{B} & 4 & -6 & 2 & 0 \\
+\mathbf{C} & 2 & 3 & -6 & 1 \\
+\mathbf{D} & 0 & 0 & 2 & -2
+\end{array}
+$$
+
+(a) Find the long run fraction the chain satisfy the detailed What is the expected amount of time he spends in these four states?
+
+(b) Does balance condition? 
+
+(c) They are amorous now. of time until depression sets in?
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.29}
+A small company maintains a fleet of four cars to be driven by its workers on business trips. Requests to use cars are a Poisson process with rate 1.5 per day. A car is used for an exponentially distributed time with mean 2 days. Forgetting about weekends, we arrive at the following Markov chain for the number of cars in service.
+
+$$
+\begin{array}{cccccc} 
+& 0 & 1 & 2 & 3 & 4 \\
+0 & -1.5 & 1.5 & 0 & 0 & 0 \\
+1 & 0.5 & -2.0 & 1.5 & 0 & 0 \\
+2 & 0 & 1.0 & -2.5 & 1.5 & 0 \\
+3 & 0 & 0 & 1.5 & -3 & 1.5 \\
+4 & 0 & 0 & 0 & 2 & -2
+\end{array}
+$$
+
+(a) Find the stationary distribution. 
+
+(b) At what rate do unfulfilled requests come in? How would this change if there were only three cars?
+
+(c) Let $g(i)=E_{i} T_{4} .$ Write and solve equations to find the $g(i) .$ 
+
+(d) Use the stationary distribution to compute $E_{3} T_{4}$
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.30}
+A submarine has three navigational devices but can remain at sea if at least two are working. Suppose that the failure times are exponential with means 1 year, 1.5 years, and 3 years. Formulate a Markov chain with states 0 = all parts working, 1,2,3 = one part failed, and 4 = two failures. Compute E0T4 to determine the average length of time the boat can remain at sea.
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.32}
+Consider a taxi station at an airport where taxis and (groups of) cus- tomers arrive at times of Poisson processes with rates 2 and 3 per minute. Suppose that a taxi will wait no matter how many other taxis are present. However, if an arriving person does not find a taxi waiting he leaves to find alternative transportation. 
+
+(a) Find the proportion of arriving customers that get taxis.
+
+(b) Find the average number of taxis waiting.
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{4.38}
+ Consider an M/M/s queue with no waiting room. In words, requests for a phone line occur at a rate λ. If one of the s lines is free, the customer takes it and talks for an exponential amount of time with rate μ. If no lines are free, the customer goes away never to come back. Find the stationary distribution. You do not have to evaluate the normalizing constant.
+
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
