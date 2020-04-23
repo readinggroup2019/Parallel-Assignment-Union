@@ -1,0 +1,115 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{XXX} \hfill \textbf{Homework - }   \\
+Email: XXX \hfill ID: XXX \\
+\normalsize Course: Bayesian \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.7}
+    Prior vs. posterior predictive checks (from Gelman, Meng, and Stern, 1996): consider 100 observations, $y_{1}, \ldots, y_{n},$ modeled as independent samples from a $N(\theta, 1)$ distribution with a diffuse prior distribution, say, $p(\theta)=\frac{1}{2 A}$ for $\theta \in[-A, A]$ with some extremely large value of $A,$ such as $10^{5} .$ We wish to check the model using, as a test statistic, $T(y)=\max _{i}\left|y_{i}\right|:$ is the maximum absolute observed value consistent with the normal model? Consider a dataset in which $\bar{y}=5.1$ and $T(y)=8.1$
+    \begin{enumerate}[(a)]
+        \item What is the posterior predictive distribution for $y^{\text {rep? }}$ Make a histogram for the posterior predictive distribution of $T\left(y^{\mathrm{rep}}\right)$ and give the posterior predictive $p$ -value for the observation $T(y)=8.1$
+        \item The prior predictive distribution is $p\left(y^{\mathrm{rep}}\right)=\int p\left(y^{\mathrm{rep}} | \theta\right) p(\theta) d \theta$ (Compare to equation 
+        (6.1).) What is the prior predictive distribution for $y^{\text {rep }}$ in this example? Roughly sketch the prior predictive distribution of $T\left(y^{\mathrm{rep}}\right)$ and give the approximate prior predictive $p$ -value for the observation $T(y)=8.1$
+        \item Your answers for (a) and (b) should show that the data are consistent with the posterior predictive but not the prior predictive distribution. Does this make sense? Explain.
+    \end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{7.1}
+    Predictive accuracy and cross-validation: Compute AIC, DIC, WAIC, and cross-validation for the logistic regression fit to the bioassay example of Section 3.7.
+\end{problem}
+\begin{solution}
+  
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{7.2}
+    Information criteria: show that DIC yields an estimate of elpd that is correct in expectation, in the case of normal models or in the asymptotic limit of large sample sizes (see Spiegelhalter et al., 2002, p. 604).
+\end{problem}
+\begin{solution}
+  
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{7.4}
+    Bayes factors when the prior distribution is improper: on page 183, we discuss Bayes factors for comparing two extreme models for the SAT coaching example.
+    \begin{enumerate}[(a)]
+        \item Derive the Bayes factor, $p\left(H_{2} | y\right) / p\left(H_{1} | y\right),$ as a function of $y_{1}, \ldots, y_{J}, \sigma_{1}, \ldots, \sigma_{J},$ and
+        $A,$ for the models with $\mathrm{N}\left(0, A^{2}\right)$ prior distributions.
+        \item Evaluate the Bayes factor in the limit $A \rightarrow \infty$.
+        \item For fixed $A$, evaluate the Bayes factor as the number of schools, $J$, increases. Assume for simplicity that $\sigma_{1}=\cdots=\sigma_{J}=\sigma,$ and that the sample mean and variance of the
+        $y_{j}$ 's do not change.
+    \end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
