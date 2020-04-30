@@ -1,0 +1,134 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{} \hfill \textbf{Homework - 11}   \\
+Email:  \hfill ID: 201900015 \\
+\normalsize Course: Bayesian \hfill Term: Spring 2020\\
+Instructor: Dr. Luo  \hfill Due Date: $6^{th}$ May, 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{8.7}
+Simple random sampling:
+
+(a) Derive the exact posterior distribution for $\bar{y}$ under simple random sampling with the normal model and noninformative prior distribution.
+
+(b) Derive the asymptotic result (8.6).
+
+\end{problem}
+\begin{solution}
+	
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{8.8}
+Finite-population inference for completely randomized experiments:
+
+(a) Derive the asymptotic result (8.17).
+
+(b) Derive the (finite-population) inference for $\bar{y}_{A}-\bar{y}_{B}$ under a model in which the pairs $\left(y_{i}^{A}, y_{i}^{B}\right)$ are drawn from a bivariate normal distribution with mean $\left(\mu^{A}, \mu^{B}\right),$ standard deviations $\left(\sigma^{A}, \sigma^{B}\right),$ and correlation $\rho$
+
+(c) Discuss how inference in (b) depends on $\rho$ and the implications in practice. Why does the dependence on $\rho$ disappear in the limit of large $N / n ?$
+\end{problem}
+\begin{solution}
+	
+	
+	
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{8.11}
+Capture-recapture (see Seber, 1992, and Barry et al., 2003): a statistician/fisherman is interested in $N,$ the number of fish in a certain pond. He catches 100 fish, tags them, and throws them back. A few days later, he returns and catches fish until he has caught 20 tagged fish, at which point he has also caught 70 untagged fish. (That is, the second sample has 20 tagged fish out of 90 total.)
+
+(a) Assuming that all fish are sampled independently and with equal probability, give the posterior distribution for $N$ based on a noninformative prior distribution. (You can give the density in unnormalized form.)
+
+(b) Briefly discuss your prior distribution and also make sure your posterior distribution is proper.
+
+(c) Give the probability that the next fish caught by the fisherman is tagged. Write the result as a sum or integral--you do not need to evaluate it, but the result should not be a function of $N$.
+
+(d) The statistician/fisherman checks his second catch of fish and realizes that, of the 20 'tagged' fish, 15 are definitely tagged, but the other 5 may be tagged - he is not sure. Include this aspect of missing data in your model and give the new joint posterior density for all parameters (in unnormalized form).
+	
+\end{problem}
+\begin{solution}
+	
+	
+	
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{9.1}
+Basic decision analysis: Widgets cost $\$ 2$ each to manufacture and you can sell them for
+\$3. Your forecast for the market for widgets is (approximately) normally distributed with mean 10,000 and standard deviation $5,000 .$ How many widgets should you manufacture
+in order to maximize your expected net profit?
+
+\end{problem}
+\begin{solution}
+	
+	
+	
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
