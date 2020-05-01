@@ -1,0 +1,175 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{diagbox} 
+\newcommand{\normal}{\mathcal{N}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+\large\textbf{...} \hfill \textbf{Homework - 11\#}   \\
+Email: ... \hfill ID: ...\\
+\normalsize Course: Stochastic Processes  \hfill Term: Spring 2020\\
+Instructor: Dr. Zhang \& Dr. Dai \\%\hfill Due Date:\ 2020-3-17\\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+
+\begin{problem}{5.1}
+Brother-sister mating. Consider the six state chain defined in Exercise 1.66. Show that the total number of $A$ 's is a martingale and use this to compute the probability of getting absorbed into the 2,2 (i.e., all $A$ 's state) starting from each initial state.
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.2}
+Let $X_{n}$ be the Wright-Fisher model with no mutation defined in Example
+1.9.
+
+(a) Show that $X_{n}$ is a martingale and use Theorem 5.14 to conclude that $P_{x}\left(V_{N}<V_{0}\right)=x / N . \quad$
+
+(b) Show that $Y_{n}=X_{n}\left(N-X_{n}\right) /(1-1 / N)^{n}$ is a
+martingale. 
+
+(c) Use this to conclude that
+$$
+(N-1) \leq \frac{x(N-x)(1-1 / N)^{n}}{P_{x}\left(0<X_{n}<N\right)} \leq \frac{N^{2}}{4}
+$$
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.3}
+Lognormal stock prices. Consider the special case of Example 5.5 in which $X_{i}=e^{\eta_{i}}$ where $\eta_{i}=\operatorname{normal}\left(\mu, \sigma^{2}\right) .$ For what values of $\mu$ and $\sigma$ is $M_{n}=$
+$M_{0} \cdot X_{1} \cdots X_{n}$ a martingale?
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.4}
+Suppose that in Polya's urn there is one ball of each color at time 0. Let $X_{n}$ be the fraction of red balls at time $n .$ Use Theorem 5.13 to conclude that $P\left(X_{n} \geq 0.9 \text { for some } n\right) \leq 5 / 9$.
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.6}
+An unfair fair game. Define random variables recursively by $Y_{0}=1$ and
+for $n \geq 1, Y_{n}$ is chosen uniformly on $\left(0, Y_{n-1}\right) .$ If we let $U_{1}, U_{2}, \ldots$ be uniform on $(0,1),$ then we can write this sequence as $Y_{n}=U_{n} U_{n-1} \cdots U_{0} .$ (a) Use Example 5.5 to conclude that $M_{n}=2^{n} Y_{n}$ is a martingale. (b) Use the fact that $\log Y_{n}=\log U_{1}+\cdots+\log U_{n}$ to show that $(1 / n) \log X_{n} \rightarrow-1$
+conclude $M_{n} \rightarrow 0,$ i.e., in this "fair" game our fortune always converges to 0 as time tends to $\infty$.
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.7}
+General birth and death chains. The state space is $\{0,1,2, \ldots\}$ and the transition probability has
+$$
+\begin{array}{ll}
+p(x, x+1)=p_{x} & \\
+p(x, x-1)=q_{x} & \text { for } x>0 \\
+p(x, x)=1-p_{x}-q_{x} & \text { for } x \geq 0
+\end{array}
+$$
+while the other $p(x, y)=0 .$ Let $V_{y}=\min \left\{n \geq 0: X_{n}=y\right\}$ be the time of the first visit to $y$ and let $h_{N}(x)=P_{x}\left(V_{N}<V_{0}\right) .$ Let $\phi(z)=\sum_{y=1}^{z} \prod_{x=1}^{y-1} q_{x} / p_{x}$
+Show that
+$$
+P_{x}\left(V_{b}<V_{a}\right)=\frac{\phi(x)-\phi(a)}{\phi(b)-\phi(a)}
+$$
+From this it follows that 0 is recurrent if and only if $\phi(b) \rightarrow \infty$ as $b \rightarrow \infty$ giving another solution of Exercise 9.46 from Chapter 1.
+\end{problem}
+
+\begin{solution}
+...
+\end{solution} 
+% Problem 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{5.12}
+Generating function of the time of gambler's ruin. Continue with the set-up of the previous problem. (a) Use the exponential martingale and our stopping theorem to conclude that if $\theta \leq 0,$ then $e^{\theta x}=E_{x}\left(\phi(\theta)^{-V_{0}}\right) .$ (b) Let $0<s<1 .$ Solve the equation $\phi(\theta)=1 / s,$ then use (a) to conclude
+$$
+E_{x}\left(s^{V_{0}}\right)=\left(\frac{1-\sqrt{1-4 p q s^{2}}}{2 p s}\right)^{x}
+$$
+(c) Why must the answer in (b) be of the form $f(s)^{x ?}$
+\end{problem}
+\begin{solution}
+...
+\end{solution} 
+
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+\end{document}
