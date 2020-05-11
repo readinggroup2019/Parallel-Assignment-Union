@@ -1,0 +1,125 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{XXX} \hfill \textbf{Homework 12}   \\
+Email: XXX@ruc.edu.cn \hfill ID: 20190001-- \\
+\normalsize Course: Statistical Models II \hfill Term: Spring 2020\\
+%Instructor: Shiyuan He, Wei Ma \hfill Due Date: $18^{th}$ Apr., 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{9.1.1}
+(a) Show that under the two-sample model, the difference of the sample averages, $\bar{y}_{2}-\bar{y}_{1}$, has variance $\left(n_{1}+n_{2}\right) \sigma^{2} /\left(n_{1} n_{2}\right)$. Show that subject to $n_1 + n_2 = n$, this is minimized
+when $n_1$ and $n_2$ are as nearly equal as possible.
+
+(b) Suppose that $n$ units are split into $k$ blocks of size $m + 1$, and that one unit in each block is chosen at random to be treated, while the remaining m are controls. Suppose that the responses in the $j$-th block are $y_{j1}$ and $y_{j2},\cdots, y_{j(m+1)}$, and let $d_j$ represent the
+difference between the treated individual and the average of the controls. Show that the
+average of these differences has variance $(m+1) \sigma^{2} /(k m)$, and show that for fixed $n$ this is minimized when $m = 1$.
+\end{problem}
+\begin{solution}
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{9.1.2}
+Suppose a paired comparison experiment is performed, in which the $j$-th pair satisfies the normal linear model
+
+$$S^{2}=\frac{1}{2(m-1)} \sum_{j, t}\left(\mu_{j}-\bar{\mu}+\varepsilon_{t j}-\bar{\varepsilon}_{\ldots}\right)^{2}$$
+
+but that data analysis is performed using the two-sample model. Show that the variance estimator can be written as
+
+$$S^{2}=\frac{1}{2(m-1)} \sum_{j, t}\left(\mu_{j}-\bar{\mu}+\varepsilon_{t j}-\bar{\varepsilon}_{\ldots}\right)^{2}$$
+
+Deduce that this has expected value $\sigma^{2}+(m-1)^{-1} \sum_{i}\left(\mu_{j}-\bar{\mu}_{\cdot}\right)^{2}$ conditional on the $\mu_j$, and hence show that if the µj are normally distributed with variance $\tau_2$, then $\mathbb{E}(S_2) =\sigma^{2}+\tau^{2}$.
+
+Show that if the two-sample model is used in this situation, the length of a $95\%$ confidence interval for $2\delta$ is roughly $2\left(\sigma^{2}+\tau^{2}\right)^{1 / 2} t_{2(m-1)}(0.025)$, whereas under the paired comparisons model the length is about $2 \sigma t_{m-1}(0.025)$. 
+
+For what values of $\tau^{2} / \sigma^{2}$ are the two-sample intervals shorter when 
+
+(a) $m = 3$, 
+
+(b) $m = 11$? 
+
+Discuss your results.
+\end{problem}
+\begin{solution}
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{9.1.3}
+	Check (9.3), find $\operatorname{var}\left(T_{j}\right)$ and $\operatorname{cov}\left(T_{i}, T_{k}\right)$ and hence verify the given formulae for the mean and variance of $\bar{Y}_{1}-\bar{Y}_{0}$.
+\end{problem}
+\begin{solution}
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{9.1.4}
+	In Example 9.1, show that $Z$ is a monotonic function of $\bar{D}$.
+\end{problem}
+\begin{solution}
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
