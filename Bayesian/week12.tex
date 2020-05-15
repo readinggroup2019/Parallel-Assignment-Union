@@ -1,0 +1,131 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{x} \hfill \textbf{Homework - 12}   \\
+Email:201900015x@ruc.edu.cn  \hfill ID: 201900015x \\
+\normalsize Course: Bayesian \hfill Term: Spring 2020\\
+Instructor: Dr. He \hfill Due Date: $20^{th}$ May, 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.14}
+Show that the multiplicative random walk:
+$$X_{t+1}=X_t\epsilon_t$$
+is not irreducible when $\epsilon_{t} \sim \mathcal{E} x p(1)$ and $x_{0} \in \mathbb{R}$.(Hint: Show that it produces
+two irreducible components.) 
+\end{problem}
+\begin{solution}
+    
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{6.17}
+Show that the split chain defined on $\mathcal{X} \times\{0,1\}$ by the following transition kernel: 
+\begin{align*}
+    P\left(\check{X}_{n+1} \in A \times\{0\} |\left(x_{n}, 0\right)\right) 
+    &=\mathbb{I}_{C}\left(x_{n}\right)\left\{\frac{P\left(X_{n}, A \cap C\right)-\epsilon \nu(A \cap C)}{1-\epsilon}(1-\epsilon)\right. \\
+    &\left.+\frac{P\left(X_{n}, A \cap C^{c}\right)-\epsilon \nu\left(A \cap C^{c}\right)}{1-\epsilon}\right\} \\
+    &+\mathbb{I}_{C^{c}}\left(X_{n}\right)\left\{P\left(X_{n}, A \cap C\right)(1-\epsilon)+P\left(X_{n}, A \cap C^{c}\right)\right\} \\
+    \\
+    P\left(\check{X}_{n+1} \in A \times\{1\} |\left(x_{n}, 0\right)\right)
+    &=\mathbb{I}_{C}\left(X_{n}\right) \frac{P\left(X_{n}, A \cap C\right)-\epsilon \nu(A \cap C)}{1-\epsilon} \epsilon+\mathbb{I}_{C^{c}}\left(X_{n}\right) P\left(X_{n}, A \cap C\right) \epsilon \\
+    \\
+    P\left(\bar{X}_{n+1} \in A \times\{0\} |\left(x_{n}, 1\right)\right)&=\nu(A \cap C)(1-\epsilon)+\nu\left(A \cap C^{c}\right) \\
+    \\
+    P\left(\tilde{X}_{n+1} \in A \times\{1\} |\left(x_{n}, 1\right)\right)&=\nu(A \cap C) \epsilon
+\end{align*}
+satisfies
+$$\begin{array}{c}
+    P\left(\check{X}_{n+1} \in A \times\{1\} | \check{x}_{n}\right)=\varepsilon \nu(A \cap C) \\
+    P\left(\check{X}_{n+1} \in A \times\{0\} | \check{x}_{n}\right)=\nu\left(A \cap C^{c}\right)+(1-\varepsilon) \nu(A \cap C)
+    \end{array}$$
+for every $\check{x}_{n} \in C \times\{1\} .$ Deduce that $C \times\{1\}$ is an atom of the split chain $\left(\check{X}_{n}\right)$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{6.29(a)}
+Establish (i) and (ii) of Theorem 6.28. 
+
+(a)Use
+$$K^{n}(x, A) \geq K^{r}(x, \alpha) K^{s}(\alpha, \alpha) K^{t}(\alpha, A)$$
+for $r+s+t=n$ and $r$ and $s$ such that
+$$K^r(x,\alpha)>0,K^s(\alpha,A)>0$$
+to derive from the Chapman-Kolmogorov equations that $\mathbb{E}_{x}\left[\eta_{A}\right]=\infty$ when $\mathbb{E}_{\alpha}\left[\eta_{\alpha}\right]=\infty$
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{6.30}
+Referring to Definition 6.32, show that if $P\left(\eta_{A}=\infty\right) \neq 0$ then $\mathbb{E}_{x}\left[\eta_{A}\right]=\infty$,
+but that $P\left(\eta_{A}=\infty\right)=0$ does not imply $\mathbb{E}_{x}\left[\eta_{A}\right]<\infty$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+    
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
