@@ -74,15 +74,16 @@ average of these differences has variance $(m+1) \sigma^{2} /(k m)$, and show th
 % Problem 2
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{problem}{9.1.2}
+
 Suppose a paired comparison experiment is performed, in which the $j$-th pair satisfies the normal linear model
 
-$$y_{0,}=\mu_{j}-\delta+\varepsilon_{0 j}, \quad y_{1 j}=\mu_{j}+\delta+\epsilon_{1 j}, \quad j=1, \ldots, \ldots$$
+$$y_{0j}=\mu_{j}-\delta+\varepsilon_{0 j}, \quad y_{1 j}=\mu_{j}+\delta+\epsilon_{1 j}, \quad j=1, \ldots, \ldots$$
 
 but that data analysis is performed using the two-sample model. Show that the variance estimator can be written as
 
-$$S^{2}=\frac{1}{2(m-1)} \sum_{j, t}\left(\mu_{j}-\bar{\mu}+\varepsilon_{t j}-\bar{\varepsilon}_{\ldots}\right)^{2}$$
+$$S^{2}=\frac{1}{2(m-1)} \sum_{j, t}\left(\mu_{j}-\bar{\mu}+\varepsilon_{t j}-\bar{\varepsilon}_{..}\right)^{2}$$
 
-Deduce that this has expected value $\sigma^{2}+(m-1)^{-1} \sum_{i}\left(\mu_{j}-\bar{\mu}_{\cdot}\right)^{2}$ conditional on the $\mu_j$, and hence show that if the µj are normally distributed with variance $\tau_2$, then $\mathbb{E}(S_2) =\sigma^{2}+\tau^{2}$.
+Deduce that this has expected value $\sigma^{2}+(m-1)^{-1} \sum_{i}\left(\mu_{j}-\bar{\mu}_{\cdot}\right)^{2}$ conditional on the $\mu_j$, and hence show that if the $\mu_j$ are normally distributed with variance $\tau^2$, then $\mathbb{E}(S^2) =\sigma^{2}+\tau^{2}$.
 
 Show that if the two-sample model is used in this situation, the length of a $95\%$ confidence interval for $2\delta$ is roughly $2\left(\sigma^{2}+\tau^{2}\right)^{1 / 2} t_{2(m-1)}(0.025)$, whereas under the paired comparisons model the length is about $2 \sigma t_{m-1}(0.025)$. 
 
