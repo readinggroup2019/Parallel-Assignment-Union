@@ -121,13 +121,13 @@ Suppose that a $2^{2}$ factorial experiment is to be performed using eight units
   \begin{enumerate}[(a)]
     \item  Use the delta method to show that
     $$
-    \operatorname{var}\left(\frac{\widehat{\gamma}_{1}}{\widehat{\gamma}_{2}}\right) \doteq \frac{\gamma_{1}^{2}}{\gamma_{2}^{2}}\left(\frac{\operatorname{var}(\widehat{\gamma_{1}})}{\gamma_{1}^{2}}+\frac{\operatorname{var}(\widehat{\gamma_{2}})}{\gamma_{2}^{2}}\right)
+    \operatorname{var}\left(\frac{\hat{\gamma}_{1}}{\hat{\gamma}_{2}}\right) \doteq \frac{\gamma_{1}^{2}}{\gamma_{2}^{2}}\left(\frac{\operatorname{var}(\hat{\gamma_{1}})}{\gamma_{1}^{2}}+\frac{\operatorname{var}(\hat{\gamma_{2}})}{\gamma_{2}^{2}}\right)
     $$
-    Use this to show that $\widehat{\gamma}_{1} / \widehat{\gamma}_{2}$ has standard error $1.595,$ and hence give an approximate $95 \%$ confidence interval for $10-4 \gamma_{1} / \gamma_{2}$.
+    Use this to show that $\hat{\gamma}_{1} / \hat{\gamma}_{2}$ has standard error $1.595,$ and hence give an approximate $95 \%$ confidence interval for $10-4 \gamma_{1} / \gamma_{2}$.
 
-    \item If $\psi=-\gamma_{1} / \gamma_{2},$ show that the distribution of $\widehat{\gamma}_{2} \psi+\widehat{\gamma}_{1}$ is normal with mean zero and variance $\sigma^{2}\left(\psi^{2} v_{22}+v_{11}\right),$ where $v_{11}$ and $v_{22}$ are the diagonal elements of the matrix $\left(X^{\mathrm{T}} X\right)^{-1}$
-    that correspond to $\gamma_{1}$ and $\gamma_{2} .$ Deduce that as $(\widehat{\gamma_{2}} \psi+\widehat{\gamma_{1}})^{2} /\left\{s^{2}\left(\psi^{2} v_{22}+v_{11}\right)\right\}$
-    has an $F_{1, v}$ distribution, an exact confidence region for $\psi$ is the set of values such that $(\widehat{\gamma_{2}} \psi+\widehat{\gamma_{1}})^{2} /\left\{s^{2}\left(\psi^{2} v_{22}+v_{11}\right)\right\} \leq F_{1, v}(1-\alpha)$.\\
+    \item If $\psi=-\gamma_{1} / \gamma_{2},$ show that the distribution of $\hat{\gamma}_{2} \psi+\hat{\gamma}_{1}$ is normal with mean zero and variance $\sigma^{2}\left(\psi^{2} v_{22}+v_{11}\right),$ where $v_{11}$ and $v_{22}$ are the diagonal elements of the matrix $\left(X^{\mathrm{T}} X\right)^{-1}$
+    that correspond to $\gamma_{1}$ and $\gamma_{2} .$ Deduce that as $(\hat{\gamma_{2}} \psi+\hat{\gamma_{1}})^{2} /\left\{s^{2}\left(\psi^{2} v_{22}+v_{11}\right)\right\}$
+    has an $F_{1, v}$ distribution, an exact confidence region for $\psi$ is the set of values such that $(\hat{\gamma_{2}} \psi+\hat{\gamma_{1}})^{2} /\left\{s^{2}\left(\psi^{2} v_{22}+v_{11}\right)\right\} \leq F_{1, v}(1-\alpha)$.\\
     A $95 \%$ confidence set for $10+4 \psi$ based on the calculations in Example 9.12 is $(-\infty, 9.15),(38.03, \infty) .$ On the same graph, plot this confidence set, the average efficiencies for the different speeds and the fitted efficiency from Example 9.12 against speed. Do you find the exact confidence set surprising?
 
     \item Use part (b) to calculate the exact coverage of your delta method confidence interval.
