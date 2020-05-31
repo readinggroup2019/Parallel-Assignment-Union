@@ -1,0 +1,154 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{} \hfill \textbf{Homework - 14}   \\
+Email: @ruc.edu.cn \hfill ID: 201900015\\
+\normalsize Course: Stochastic Process \hfill Term: Spring 2020\\
+Instructor: Dr. Zhang \& Dr. Dai \hfill Due Date: $3^{rd}$ June, 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{3.10}
+Derive the spectral density for $u(t)=2 x(t) x^{\prime}(t)$ if $x(t)$ is a differentiable stationary Gaussian process with spectral density $f_{x}(\omega)$
+
+\end{problem}
+\begin{solution}
+
+
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.11}
+Let $e_{t}, t=0,\pm 1,\pm 2, \ldots,$ be independent standard normal variables and define, for $|\theta|<1$, the stationary processes
+\[
+x_{t}=\theta x_{t-1}+e_{t}=\sum_{n=-\infty}^{t} \theta^{t-n} e_{n}, \quad y_{t}=e_{t}+\psi e_{t-1}
+\]
+a) Find the covariances and spectral densities of $x_{t}$ and $y_{t}$\\
+b) Express the spectral processes $Z_{x}(\omega)$ and $Z_{y}(\omega)$ in terms of the spectral process $Z_{e}(\omega),$ and derive the cross-spectrum between $x_{t}$ and $y_{t}$
+
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.12}
+Let $u_{n}$ and $v_{n}$ be two sequences of independent, identically distributed variables with zero mean and let the stationary sequences $x_{n}$ and $y_{n}$ be defined by
+\[
+y_{n}=a_{1}+b_{1} x_{n-1}+u_{n}, \quad x_{n}=a_{2}-b_{2} y_{n}+v_{n}
+\]
+Express the spectral processes $\mathrm{d} Z_{x}$ and $\mathrm{d} Z_{y}$ as functions of $u_{n}$ and $v_{n},$ and derive the spectral densities for $x_{n}$ and $y_{n}$ and their cross-spectrum.
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.13}
+Show the following form of the law of large numbers: If $\left\{x_{n}, n \in \mathbb{N}\right\}$ is a stationary sequence with spectral process $Z(\omega),$ then
+\[
+\frac{1}{n} \sum_{k=1}^{n} x_{n} \stackrel{q \cdot m}{\rightarrow} z(0+)-Z(0-)
+\]
+cf. the limit (3.28) in Theorem 3.8.
+
+\end{problem}
+\begin{solution}
+
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{3.15}
+Take a stationary process $\{x(t), t \in \mathbb{R}\}$ with $E(x(t))=m$ and spectral density $f(\omega),$ and use it to amplitude modulate a pure randomly shifted cosine function with constant frequency $\Gamma$. Find the covariance function, spectral density, and spectral representation of the resulting process
+\[
+y(t)=x(t) \cos (\Gamma t+\phi)
+\]
+when $\phi$ is uniformly distributed in $(0,2 \pi)$
+
+\end{problem}
+\begin{solution}
+
+
+
+	
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
