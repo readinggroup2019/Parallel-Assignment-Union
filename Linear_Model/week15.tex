@@ -1,0 +1,169 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\normal}{\mathcal{N}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{xxx} \hfill \textbf{Homework - 15}   \\
+Email: xxx \hfill ID: xxx \\
+\normalsize Course: Linear Model   \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.3.3}
+Check that the moment-generating function that corresponds to (10.14) is $\exp \{b(\theta+$ $t \phi)-b(\theta)\},$ give the corresponding cumulant-generating function, and hence verify the mean and variance in (10.16).
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.3.4}
+Show that the gamma density (10.22) can be put in form (10.14) with canonical parameter $\theta=-\mu^{-1}, b(\theta)=-\log (-\theta)$ and dispersion parameter $\phi=1 / v .$ Give the canonical link function, and use $b(\theta)$ to show that (10.22) has mean $\mu,$ variance function $V(\mu)=\mu^{2}$ and variance $\mu^{2} / v$.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.3.7}
+Suppose that the canonical link is used with the log likelihood $(10.17),$ so that $\theta_{j}=\eta_{j}$ and that it is required to check this link. Let $\theta_{j}=\theta\left(\eta_{j}\right),$ where $\theta(\cdot)$ is a potentially nonlinear function. By quadratic Taylor series expansion of $\theta(.)$ about a suitable $\eta^{0}$, show that provided $\eta$ contains an intercept term, we can write $\theta(\eta) \doteq \eta^{\prime}+\delta \eta^{\prime 2},$ where $\delta$ is proportional to $b^{\prime \prime}\left(\eta^{0}\right)$ and $\eta^{\prime}$ is a linear function of $\eta .$ Hence verify that when the fit of a model with the canonical link has given linear predictor $\widehat{\eta},$ a constructed variable test of the canonical link is based on the change in fit when $\widehat{\eta}^{2}$ is added to the linear predictor. Discuss Example 8.24 in this light.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.4.1}
+Data $y_{1}, \ldots, y_{n}$ are assumed to follow a binary logistic model in which $y_{j}$ takes value 1 with probability $\pi_{j}=\exp \left(x_{j}^{\mathrm{T}} \beta\right) /\left\{1+\exp \left(x_{j}^{\mathrm{T}} \beta\right)\right\}$ and value 0 otherwise, for $j=1, \ldots, n$.
+
+(a) Show that the deviance for a model with fitted probabilities $\widehat{\pi}_{j}$ can be written as
+\[
+D=-2\left\{y^{\mathrm{T}} X \widehat{\beta}+\sum_{j=1}^{n} \log \left(1-\widehat{\pi}_{j}\right)\right\}
+\]
+and that the likelihood equation is $X^{\mathrm{T}} y=X^{\mathrm{T}} \widehat{\pi} .$ Hence show that the deviance is a function of the $\widehat{\pi}_{j}$ alone.
+
+(b) If $\pi_{1}=\cdots=\pi_{n}=\pi,$ then show that $\widehat{\pi}=\bar{y},$ and verify that
+\[
+D=-2 n\{\bar{y} \log \bar{y}+(1-\bar{y}) \log (1-\bar{y})\}
+\]
+Comment on the implications for using $D$ to measure the discrepancy between the data and fitted model.
+
+(c) $\operatorname{In}(\mathrm{b}),$ show that Pearson's statistic (10.21) is identically equal to $n .$ Comment.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Proble5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.10.3}
+For a generalized linear model with known dispersion parameter $\phi$ and canonical link function, write the deviance as $\sum_{j=1}^{n} d_{j}^{2},$ where $d_{j}^{2}$ is the contribution from the $j$ th observation. Also let
+\[
+u_{j}(\beta)=\partial \log f\left(y_{j} ; \eta_{j}, \phi\right) / \partial \eta_{j}, \quad w_{j}=-\partial^{2} \log f\left(y_{j} ; \eta_{j}, \phi\right) / \partial \eta_{j}^{2}
+\]
+denote the elements of the score vector and observed information, let $X$ denote the $n \times p$ matrix whose $j$ th row is $x_{j}^{\mathrm{T}},$ where $\eta_{j}=\beta^{\mathrm{T}} x_{j},$ and let $H$ denote the matrix
+$
+W^{1 / 2} X\left(X^{\mathrm{T}} W X\right)^{-1} X^{\mathrm{T}} W^{1 / 2}, \text { where } W=\operatorname{diag}\left\{w_{1}, \ldots, w_{n}\right\}
+$
+
+(a) Let $\widehat{\beta}_{(k)}$ be the solution of the likelihood equation when case $k$ is deleted,
+\[
+\sum_{j \neq k} x_{j} u_{j}\left(\widehat{\beta}_{(k)}\right)=0
+\]
+and let $\widehat{\beta}$ be the maximum likelihood estimate based on all $n$ observations. Use first-order Taylor series expansion of (10.65) about $\widehat{\beta}$ to show that
+\[
+\widehat{\beta}_{(k)} \doteq \widehat{\beta}-\left(X^{\mathrm{T}} W X\right)^{-1} x_{k} \frac{u_{k}(\widehat{\beta})}{1-h_{k k}}
+\]
+Express $\widehat{\beta}_{(k)}$ in terms of the standardized Pearson residual $r_{P k}=u_{k} /\left\{w_{k}\left(1-h_{k k}\right)\right\}^{1 / 2}$
+
+(b) Use a second order Taylor series expansion of the deviance to show that the change in the deviance when the $k$ th case is deleted is approximately
+\[
+r_{G k}^{2}=\left(1-h_{k k}\right) r_{D k}^{2}+h_{k k} r_{P k}^{2}
+\]
+where $r_{D k}$ is the standardized deviance residual $d_{k} /\left(1-h_{k k}\right)^{1 / 2}$
+
+(c) Suppose models $A$ and $B$ have deviances $D_{A}$ and $D_{B} .$ Use (b) to find an expression for the change in the likelihood ratio statistic $D_{A}-D_{B},$ when the $k$ th case is deleted.
+
+(d) Show that your results (a)-(c) are exact in models with normal errors.
+\end{problem}
+\begin{solution}
+...
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+
+
+
+\end{document}
