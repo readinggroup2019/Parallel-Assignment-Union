@@ -1,0 +1,143 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\normal}{\mathcal{N}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{XXXX} \hfill \textbf{Homework 16}   \\
+Email: *****@ruc.edu.cn \hfill ID: 201900015* \\
+\normalsize Course: Linear Model   \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.4.1}
+Data $y_{1}, \ldots, y_{n}$ are assumed to follow a binary logistic model in which $y_{j}$ takes value 1 with probability $\pi_{j}=\exp \left(x_{j}^{\mathrm{T}} \beta\right) /\left\{1+\exp \left(x_{j}^{\mathrm{T}} \beta\right)\right\}$ and value 0 otherwise, for $j=1, \ldots, n$.
+
+(a) Show that the deviance for a model with fitted probabilities $\widehat{\pi}_{j}$ can be written as
+\[
+D=-2\left\{y^{\mathrm{T}} X \widehat{\beta}+\sum_{j=1}^{n} \log \left(1-\widehat{\pi}_{j}\right)\right\}
+\]
+and that the likelihood equation is $X^{\mathrm{T}} y=X^{\mathrm{T}} \widehat{\pi} .$ Hence show that the deviance is a function of the $\widehat{\pi}_{j}$ alone.
+
+(b) If $\pi_{1}=\cdots=\pi_{n}=\pi,$ then show that $\widehat{\pi}=\bar{y},$ and verify that
+\[
+D=-2 n\{\bar{y} \log \bar{y}+(1-\bar{y}) \log (1-\bar{y})\}
+\]
+Comment on the implications for using $D$ to measure the discrepancy between the data and fitted model.
+
+(c) $\operatorname{In}(\mathrm{b}),$ show that Pearson's statistic (10.21) is identically equal to $n .$ Comment.
+
+\end{problem}
+\begin{solution}
+	
+	\textit{Note: This is also the homework in last week.}
+	
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.4.2}
+	(a) Show that the parametric link function
+	$$g(\pi ; \gamma)=\log \left[\gamma^{-1}\left\{(1-\pi)^{-\gamma}-1\right\}\right], \quad \gamma \neq 0$$
+	gives the logit and complementary log-log links when $\gamma=1$ and when $\gamma \rightarrow 0$.
+	Give a similar function containing the logit and log-log link functions.
+	(b) Show that the link function
+	$$g(\pi ; \gamma)=\log \left[\gamma^{-1}\left\{(1-\pi)^{-\gamma}-1\right\}\right], \quad \gamma \neq 0$$
+	is symmetric for all γ and gives the logit and identity functions when $\gamma \rightarrow 0$ and when $\gamma=1$.
+\end{problem}
+\begin{solution}
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.4.3}
+	If $X$ is a Poisson variable with mean $\mu=\exp \left(x^{\mathrm{T}} \beta\right)$ and $Y$ is a binary variable indicating
+	the event $X > 0$, find the link function between $\mathrm{E}(Y)$ and $x^{\mathrm{T}} \beta$.
+
+\end{problem}
+\begin{solution}
+	
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{Extra}
+Reproduce the right panel of Figure 10.6 in Example 10.17 and think about what will happen if the range of the X-axis goes beyond 12. Also, generate a figure where the X-axis is and the Y-axis is the ratio .
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+
+
+
+\end{document}
