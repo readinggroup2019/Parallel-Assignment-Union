@@ -1,0 +1,175 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{diagbox} 
+\newcommand{\normal}{\mathcal{N}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+%%%%% Information!!!
+\large\textbf{xxx} \hfill \textbf{Homework - 16}   \\
+Email: xxx \hfill ID: xxx \\
+\normalsize Course: Stochastic Processes \hfill Term: Spring 2020\\
+%Instructor: Zheng Zhang, Wenlin Dai \hfill Due Date: $17^{th}$ June, 2020 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+
+\begin{problem}{4.6}
+	 Consider the covariance function
+	\[
+	r_{y}(t)=\frac{\sigma^{2}}{4 \alpha \omega_{0}^{2}} e^{-\alpha|t|}\left(\cos \beta t+\frac{\alpha}{\beta} \sin \beta|t|\right)
+	\]
+	of the linear oscillator in Example 4.5 on page 138 The covariance function contains some non-differentiable $|t| ;$ show that it still fulfills a condition for sample function differentiability, but not for twice differentiability.
+	
+	Find the relation between the relative damping $\zeta$ and the spectral width parameter $\alpha=\omega_{2} / \sqrt{\omega_{0} \omega_{4}}.$ 
+\end{problem}
+\begin{solution}
+
+...
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{problem}{4.7}
+Define
+\[
+v(T)=V\left(\frac{1}{T} \int_{0}^{T} x(t) \mathrm{d} t\right)
+\]
+and assume $\{x(t), t \in \mathbb{R}\}$ has a bounded spectral density $f(\omega)$. Find the relation between $f(0)$ and the asymtotic behavior of $v(T)$ as $T \rightarrow \infty.$
+\end{problem}
+\begin{solution}
+
+...
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{problem}{4.14}
+	Take a spectral distribution $F(\omega)$ with unit mass over $(-\pi, \pi],$ with $F(\pi)-F(-\pi+)=1,$ and let the random variable $v$ be distributed according to $F$. Also, let $u$ be uniformly distributed over $[-\pi, \pi),$ and independent of $v .$ Prove that the random sequence $x_{n}=e^{i(v n+u)}$ is stationary, compute its covariance function, and show that its spectrum is $F$.
+\end{problem}
+\begin{solution}
+	
+...
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{problem}{5.4}
+Let $z_{k}$ be independent standard normal variables and define
+\[
+x(t)=\sqrt{2} \sum_{k=1}^{\infty} \frac{z_{k}}{\pi k} \sin (\pi k t), \quad 0 \leq t \leq 1
+\]
+This is the Karhunen-Loève representation of a Gaussian process with covariance function
+\[
+r_{x}(s, t)=\sum_{k=1}^{\infty} \frac{2}{\pi^{2} k^{2}} \sin (\pi k s) \sin (\pi k t)
+\]
+What process is this? Hint: Compare $r_{x}(1-s, 1-t)$ and $r_{x}(s, t).$
+\end{problem}
+\begin{solution}
+	
+	...
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{problem}{5.5}
+	Let $\{w(t), 0 \leq t<\infty\}$ be standard Brownian motion, and let $A$ have $E(A)=0, V(A)=1,$ and be independent of $\{w(t)\} .$ Suppose that $x(s)=$ $A s+w(s)$ is observed for $0 \leq s \leq t$. Find the best estimate of $A$ in mean square sense of the form $\widehat{A}(t)=\int_{0}^{t} h(t, s) \mathrm{d} x(s) ;[123].$
+\end{problem}
+\begin{solution}
+	
+	...
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{problem}{5.6}
+Show that
+\[
+\int_{a}^{b} E\left(\left|x(t)-\sum_{0}^{n} \sqrt{\lambda_{k}} \phi_{k}(t) z_{k}\right|^{2}\right) \mathrm{d} t=\sum_{n+1}^{\infty} \lambda_{k}
+\]
+and prove the optimality claim statement in Remark 5.4.
+\end{problem}
+\begin{solution}
+	
+	...
+	
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
