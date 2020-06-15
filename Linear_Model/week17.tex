@@ -1,0 +1,186 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\normal}{\mathcal{N}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
+    %backgroundcolor=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+    rulesepcolor= \color{gray}, %代码块边框颜色
+    breaklines=true,  %代码过长则换行
+    numbers=none, %行号在左侧显示
+    numberstyle= \small,%行号字体
+    %keywordstyle= \color{blue},%关键字颜色
+    commentstyle=\color{gray}, %注释颜色
+    frame=shadowbox%用方框框住代码块
+    }
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{XXXX} \hfill \textbf{Homework 16}   \\
+Email: *****@ruc.edu.cn \hfill ID: 201900015* \\
+\normalsize Course: Linear Model   \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.5.1}
+  Consider the $2 \times n$ table of independent Poisson variables
+  $$
+  \begin{array}{lllll}
+  Y_{11} & \cdots & Y_{1 j} & \cdots & Y_{1 n} \\
+  Y_{21} & \cdots & Y_{2 j} & \cdots & Y_{2 n}
+  \end{array}
+  $$
+  where
+  $$
+  \eta_{1 j}=\log \mathrm{E}\left(Y_{1 j}\right)=x_{1 j}^{\mathrm{T}} \beta, \quad \eta_{2 j}=\log \mathrm{E}\left(Y_{2 j}\right)=x_{2 j}^{\mathrm{T}} \beta
+  $$
+  Show that the conditional density of $Y_{1 j}$ given that $Y_{1 j}+Y_{2 j}=m_{j}$ is binomial with denominator $m_{j}$ and probability $\pi_{j}$ satisfying $\log \left\{\pi_{j} /\left(1-\pi_{j}\right)\right\}=x_{j}^{\mathrm{T}} \beta,$ where $x_{j}=x_{1 j}-$ $x_{2 j} .$
+  This implies that a contingency table in which a single, binary, classification is regarded as the response can be analyzed using logistic regression. What advantages are there to doing so in terms of model-fitting and the examination of residuals?
+\end{problem}
+\begin{solution}
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.5.2}
+In light of the preceding exercise and the discussion on page 501 , reconsider the models fitted in Example $10.21 .$ Say why Table 10.13 contains much larger standard errors for the logistic than for the log-linear model.
+\end{problem}
+\begin{solution}
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.5.3}
+  For a $2 \times 2$ contingency table with probabilities
+  $$
+  \begin{array}{ll}
+  \pi_{00} & \pi_{01} \\
+  \pi_{10} & \pi_{11}
+  \end{array}
+  $$
+  the maximal log-linear model may be written as
+  $$
+  \begin{array}{ll}
+  \eta_{00}=\alpha+\beta+\gamma+(\beta \gamma), & \eta_{01}=\alpha+\beta-\gamma-(\beta \gamma) \\
+  \eta_{10}=\alpha-\beta+\gamma-(\beta \gamma), & \eta_{11}=\alpha-\beta-\gamma+(\beta \gamma)
+  \end{array}
+  $$
+  where $\eta_{j k}=\log \mathrm{E}\left(Y_{j k}\right)=\log \left(m \pi_{j k}\right)$ and $m=\sum_{j, k} y_{j k} .$ Show that the 'interaction' term
+  $(\beta \gamma)$ may be written $(\beta \gamma)=\frac{1}{4} \log \Delta,$ where $\Delta$ is the odds ratio $\left(\pi_{00} \pi_{11}\right) /\left(\pi_{01} \pi_{10}\right),$ so that
+  $(\beta \gamma)=0$ is equivalent to $\Delta=1$.
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{Practicals 10.4}
+  In  1961 and 1962 an experiment was conducted in Sweden to assess the effect of a speed limit on the accident rate on motorways. The experiment was conducted on 92 days in each year, matched so that day $j$ in 1961 was comparable to day $j$ in $1962 .$ On some days the speed limit was in effect and enforced, and not on other days. The number of accidents was recorded daily.
+\begin{enumerate}[(a)]
+  \item Let $Y_{i j}$ be the number of accidents on day $j$ in $196 i$, and let $I_{i j}$ indicate whether the speed limit was in effect that day. A simple model is that $Y_{1 j}$ has a Poisson distribution with mean $\lambda_{j} \exp \left(\beta I_{1 j}\right),$ while the corresponding mean for 1962 is $\lambda_{j} \exp \left(\alpha+\beta I_{2 j}\right)$
+  Show that there is a cut in the likelihood, and deduce that inference for $\alpha$ and $\beta$ may be performed using the binomial conditional distribution of $Y_{1 j}$ given $Y_{1 j}+Y_{2 j},$ for $j=1, \ldots, 92 ;$ give this distribution.
+  \item The data are in limits. The following code fits and displays the binomial model:
+    \begin{lstlisting}[language=R]
+      data(limits)
+      limits.bin <- glm(cbind(y1,y2)~delta,binomial,data=limits)
+      summary(limits.bin)
+      plot.glm.diag(limits.bin)
+    \end{lstlisting}
+
+To fit the Poisson model:
+    \begin{lstlisting}[language=R]
+      attach(limits)
+      acc <- c(y1,y2)
+      d <- c(i61,i62)
+      detach("limits")
+      year <- rep(c(1,2),c(92,92))
+      day <- factor(rep(1:92,2))
+      limits.poi <- glm(acc~day+year+day,poisson)
+      summary(limits.poi)
+    \end{lstlisting}
+
+Compare the output from the two fits, and verify that the estimates of the year and
+speed limit effects and their standard errors are equal.
+
+(Sections 10.4–10.5; Svensson, 1981)
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+
+
+
+\end{document}
