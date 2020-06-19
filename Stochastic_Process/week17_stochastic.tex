@@ -1,0 +1,175 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi) 
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text. 
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+    
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{xx} \hfill \textbf{Homework - 17}   \\
+Email: veralevel@ruc.edu.cn \hfill ID: 20190001XX \\
+\normalsize Course: Stochastic Processes \hfill Term: Spring 2020\\
+%Instructor: Dr. Sriram \hfill Due Date: $22^{nd}$ November, 2019 \\
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{6.1}
+ Show that the transformation $T x=2 x \bmod 1$ of $\Omega=[0,1), \mathcal{F}=\mathcal{B}$,
+$P=$ Lebesgue measure, is measurable and measure preserving.
+
+\end{problem}
+\begin{solution}
+
+\end{solution} 
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.2}
+(Continued.) Define the random variable $x(\omega)=0$ if $0 \leq \omega<1 / 2$,
+$x(\omega)=1$ if $1 / 2 \leq \omega<1$. Show that the sequence $x_{n}(\omega)=x\left(T^{n-1} \omega\right)$ con-
+sists of independent zeros and ones, with probability $1 / 2$ each.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.5}
+Find a distribution for $x_0$ that makes $x_{k+1}= 4x_k(1-x_k)$ stationary.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.7}
+For any sequence of random variables, $x_n$, and event $B\in \mathcal{B}$, show that the event $\{x_n \in B, \text{infinitely often}\}$is invariant under shift transformation.
+
+
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+%\lstinputlisting{HW6Q2.m}
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.8}
+ Find an ergodic transformation $T$ such that $T^{2}$ is not ergodic.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.9}
+Show that $\left\{x_{n}\right\}$ is ergodic if and only if for every $A \in \mathcal{B}_{k}, k=1,2, \ldots,$
+
+$$\frac{1}{n} \sum_{j=1}^{n} \chi_{A}\left(x_{j}, \ldots, x_{j+k}\right) \rightarrow P\left(\left(x_{1}, \ldots, x_{k+1}\right) \in A\right)$$
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.10}
+ Show that if $x$ is non-negative with $E(x)=\infty$ and $x_{n}(\omega)=x\left(T^{n-1} \omega\right)$,
+$S_{n}=\sum_{1}^{n} x_{n},$ then $S_{n} / n \rightarrow \infty$ if $T$ is ergodic.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{6.12}
+Take two stationary and ergodic sequences $\left\{x_{n}\right\}$ and $\left\{y_{n}\right\} .$ Take one of
+the two sequences at random with equal probability, $z_{n}=x_{n}, n=1,2, \ldots,$
+or $z_{n}=y_{n}, n=1,2, \ldots$ Show that $z_{n}$ is not ergodic.
+\end{problem}
+\begin{solution}
+
+
+\end{solution} 
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+ 
