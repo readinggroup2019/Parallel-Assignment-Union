@@ -1,0 +1,267 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\normal}{\mathcal{N}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
+    %backgroundcolor=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+    rulesepcolor= \color{gray}, %代码块边框颜色
+    breaklines=true,  %代码过长则换行
+    numbers=none, %行号在左侧显示
+    numberstyle= \small,%行号字体
+    %keywordstyle= \color{blue},%关键字颜色
+    commentstyle=\color{gray}, %注释颜色
+    frame=shadowbox%用方框框住代码块
+    }
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{MAOYU ZHANG} \hfill \textbf{Homework 18}   \\
+Email: 2019000157@ruc.edu.cn \hfill ID: 2019000157 \\
+\normalsize Course: Linear Model   \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.6.1}
+  Use (2.8) to establish $(10.33) .$ Give formulae for the corresponding deviance residuals when $v=1 / \xi$ and when $v=\mu / \xi$ Suppose that independent counts $y_{1}, \ldots, y_{n}$ arise with means $\mu_{j}=\exp \left(x_{j}^{\mathrm{T}} \beta\right) .$ Under the model with constant $v=1 / \xi,$ write down the negative binomial log likelihood for $\beta$ and
+$\xi .$ Explain why the likelihood equations become more complicated if the shape parameter changes for each observation, so $v_{j}=\mu_{j} / \xi$ If we estimate $\xi$ by equating the Pearson statistic $\sum\left(y,-\widehat{\mu}_{j}\right)^{2} / V\left(\widehat{\mu}_{j}\right)$ to $n-p,$ where $V\left(\mu_{j}\right)=\operatorname{var}\left(Y_{j}\right),$ discuss how to obtain the estimate under the above two variance functions.
+
+\end{problem}
+\begin{solution}
+
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.6.3}
+Find $Q(\beta ; Y)$ when $u_{j}(\beta)=\left(Y_{j}-\mu_{j}\right) /\left\{\phi g^{\prime}\left(\mu_{j}\right) V\left(\mu_{j}\right)\right\}$ and $V(\mu)$ equals $\mu, \mu(1-\mu)$ and $\mu^{2}$
+\end{problem}
+\begin{solution}
+
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.6.4}
+ One standard model for over-dispersed binomial data assumes that $R$ is binomial with denominator $m$ and probability $\pi,$ where $\pi$ has the beta density
+\[
+f(\pi ; a, b)=\frac{\Gamma(a+b)}{\Gamma(a) \Gamma(b)} \pi^{a-1}(1-\pi)^{b-1}, \quad 0<\pi<1, a, b>0
+\]
+(a) Show that this yields the beta-binomial density
+\[
+\operatorname{Pr}(R=r ; a, b)=\frac{\Gamma(m+1) \Gamma(r+a) \Gamma(m-r+b) \Gamma(a+b)}{\Gamma(r+1) \Gamma(m-r+1) \Gamma(a) \Gamma(b) \Gamma(m+a+b)}, \quad r=0, \ldots, m
+\]
+(b) Let $\mu$ and $\sigma^{2}$ denote the mean and variance of $\pi$. Show that in general,
+\[
+\mathrm{E}(R)=m \mu, \quad \operatorname{var}(R)=m \mu(1-\mu)+m(m-1) \sigma^{2}
+\]
+and that the beta density has $\mu=a /(a+b)$ and $s^{2}=a b /\{(a+b)(a+b+1)\} .$ Deduce that the beta-binomial density has mean and variance
+\[
+\mathrm{E}(R)=m a /(a+b), \quad \operatorname{var}(R)=m \mu(1-\mu)\{1+(m-1) \delta\}, \quad \delta=(a+b+1)^{-1}
+\]
+
+Hence re-express $\operatorname{Pr}(R=r ; a, b)$ as a function of $\mu$ and $\delta$. What is the condition for uniform overdispersion?
+
+\end{problem}
+\begin{solution}
+
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.7.3}
+ By writing $\sum\left\{y_{j}-\widehat{g}\left(x_{j}\right)\right\}^{2}=(y-\hat{g})^{\mathrm{T}}(y-\hat{g})$ and recalling that $y=g+\varepsilon$ and $\widehat{g}=S y$
+where $S$ is a smoothing matrix, show that
+\[
+E\left[\sum_{j=1}^{n}\left\{y_{j}-\widehat{g}\left(x_{j}\right)\right\}^{2}\right]=\sigma^{2}\left(n-2 v_{1}+v_{2}\right)+g^{T}(I-S)^{T}(I-S) g
+\]
+Hence explain the use of $s^{2}(h)$ as an estimator of $\sigma^{2}$. Under what circumstances is it unbiased?
+
+\end{problem}
+\begin{solution}
+
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{10.7.4}
+ (a) If $S_{11}(h), \ldots, S_{n n}(h)$ are the leverages of a smoothing matrix $S_{h},$ establish
+\[
+v_{1}=\sum_{j=1}^{n} S_{j j}(h), \quad v_{2}=\sum_{i, j=1}^{n} S_{i j}(h)^{2}=\sigma^{-2} \sum_{j=1}^{n} \operatorname{var}\left\{\widehat{g}\left(x_{j}\right)\right\}
+\]
+(b) Show that $S\left(x_{j} ; x_{j}, h\right)$ is proportional to the (1,1) element of $\left(X^{\top} W X\right)^{-1}$, and let the in fluence function of the smoother be $I(x)=w(0) e_{1}^{\mathrm{T}}\left(X^{\mathrm{T}} W X\right)^{-1} e_{1},$ where $e_{1}^{\mathrm{T}}=(1,0, \ldots, 0)$
+has length $k+1 .$ Show that
+\[
+\sigma^{-2} \operatorname{var}\{\widehat{g}(x)\} \leq I(x)
+\]
+and deduce that $v_{2} \leq v_{1}$
+(c) Let $I_{1}(x)$ and $I_{2}(x)$ be the influence functions corresponding to bandwidths $h_{1}<h_{2}$ and let the corresponding weight matrices be $W_{1}$ and $W_{2}$. Show that $W_{1} \leq W_{2}$ componentwise and deduce that $I_{2}(x) \geq I_{1}(x)$
+ 
+\end{problem}
+
+\begin{solution}
+
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{10.7.5}
+ 
+ Consider a linear smoother with $n \times n$ smoothing matrix $S_{h},$ so $\widehat{g}=S_{h} y,$ and show that the function $a_{j}(u)$ giving the fitted value at $x_{j}$ as a function of the response $u$ there satisfies
+\[
+a_{j}(u)=\left\{\begin{array}{ll}
+\widehat{g}\left(x_{j}\right), & u=y_{j} \\
+\widehat{g}_{-j}\left(x_{j}\right), & u=\widehat{g}_{-j}\left(x_{j}\right)
+\end{array}\right.
+\]
+Explain why this implies that $S_{j j}(h)\left\{y_{j}-\widehat{g}_{-j}\left(x_{j}\right)\right\}=\widehat{g}\left(x_{j}\right)-\widehat{g}_{-j}\left(x_{j}\right),$ and hence obtain
+(10.42)
+ 
+\end{problem}
+
+\begin{solution}
+
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{10.7.6}
+ 
+ (a) Check $(10.45),$ and hence verify that $\mathrm{E}\left(\widehat{\beta}_{0}\right)-g\left(x_{0}\right) \doteq \frac{1}{2} h^{2} g^{\prime \prime}\left(x_{0}\right)$ far from a boundary. Do the corresponding calculation for $x_{0}$ near a boundary.
+(b) Show that the bias of the Nadarayah-Watson estimator (10.40) may be expressed as
+\[
+\frac{\sum w_{j}\left\{\left(x_{j}-x_{0}\right) g^{\prime}\left(x_{0}\right)+\frac{1}{2}\left(x_{j}-x_{0}\right)^{2} g^{\prime \prime}\left(x_{0}\right)+\cdots\right\}}{\sum w_{j}}
+\]
+and deduce that this is approximately $h g^{\prime}\left(x_{0}\right) a$ near a boundary, where $a \neq 0,$ and
+\[
+\frac{1}{2} h^{2}\left\{g^{\prime \prime}\left(x_{0}\right)+f^{\prime}\left(x_{0}\right) g^{\prime}\left(x_{0}\right)\right\} \text { elsewhere }
+\]
+\end{problem}
+
+\begin{solution}
+
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{7.1.5}
+ 
+ Consider a kernel density estimator (7.4)
+(a) Verify the choice of $h$ that minimizes $(7.7) .$ If $f(y)=\sigma^{-1} \phi\{(y-\mu) / \sigma\}$ and $w(u)=$
+$\phi(u),$ find $h_{\text {opt }} .$ Discuss.
+(b) Show that $h=1.06 \sigma n^{-1 / 5}$ minimises (7.8) using the densities in (a).
+(c) Instead of using a constant bandwidth, we might take
+\[
+\widehat{f}(y)=\frac{1}{n h} \sum_{j=1}^{n} \frac{1}{\lambda_{j}} w\left(\frac{y-y_{j}}{h \lambda_{j}}\right)
+\]
+for local bandwidth factors $\lambda_{j} \propto\left\{\tilde{f}\left(y_{j}\right)\right\}^{-\gamma}$ based on a pilot density estimate $f(y) .$ Show that if the pilot estimate is exact and $\gamma=-\frac{1}{2},$ then $\hat{f}$ has bias $o\left(h^{2}\right)$
+ 
+\end{problem}
+
+\begin{solution}
+
+
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{problem}{7.1.6}
+ Find the expected value of CV(h), and show to what extent it estimates (7.9).
+ 
+\end{problem}
+
+
+\end{document}
