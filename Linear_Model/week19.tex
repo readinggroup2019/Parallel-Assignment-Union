@@ -1,0 +1,134 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[a4paper, total={7in, 10in}]{geometry}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb,amsthm}  % assumes amsmath package installed
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{verbatim}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\normal}{\mathcal{N}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\usepackage[numbered]{mcode}
+\usepackage{float}
+\usepackage{tikz}
+    \usetikzlibrary{shapes,arrows}
+    \usetikzlibrary{arrows,calc,positioning}
+
+    \tikzset{
+        block/.style = {draw, rectangle,
+            minimum height=1cm,
+            minimum width=1.5cm},
+        input/.style = {coordinate,node distance=1cm},
+        output/.style = {coordinate,node distance=4cm},
+        arrow/.style={draw, -latex,node distance=2cm},
+        pinstyle/.style = {pin edge={latex-, black,node distance=2cm}},
+        sum/.style = {draw, circle, node distance=1cm},
+    }
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
+    %backgroundcolor=\color{red!50!green!50!blue!50},%代码块背景色为浅灰色
+    rulesepcolor= \color{gray}, %代码块边框颜色
+    breaklines=true,  %代码过长则换行
+    numbers=none, %行号在左侧显示
+    numberstyle= \small,%行号字体
+    %keywordstyle= \color{blue},%关键字颜色
+    commentstyle=\color{gray}, %注释颜色
+    frame=shadowbox%用方框框住代码块
+    }
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\newenvironment{problem}[2][Problem]
+    { \begin{mdframed}[backgroundcolor=gray!20] \textbf{#1 #2} \\}
+    {  \end{mdframed}}
+
+% Define solution environment
+\newenvironment{solution}
+    {\textit{Solution:}}
+    {}
+
+\renewcommand{\qed}{\quad\qedsymbol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\large\textbf{Yonghua Su} \hfill \textbf{Homework - 16}   \\
+Email: 2019000154@ruc.edu.cn \hfill ID: 2019000154 \\
+\normalsize Course: Linear Model   \hfill Term: Spring 2020\\
+\noindent\rule{7in}{2.8pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.8.1}
+  Show that if $Y$ is continuous with cumulative hazard function $H(y),$ then $H(Y)$ has the unit exponential distribution. Hence establish that $\mathrm{E}\{H(Y) \mid Y>c\}=1+H(c),$ and explain the reasoning behind (10.55)
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.8.2}
+  Let $Y$ be a positive continuous random variable with survivor and hazard functions $\mathcal{F}(y)$ and $h(y) .$ Let $\psi(x)$ and $\chi(x)$ be arbitrary continuous positive functions of the covariate $x$ with $\psi(0)=\chi(0)=1 .$ In a proportional hazards model, the effect of a non-zero covariate is that the hazard function becomes $h(y) \psi(x),$ whereas in an accelerated life model, the survivor function becomes $\mathcal{F}\{y \chi(x)\} .$ Show that the survivor function for the proportional hazards model is $\mathcal{F}(y)^{\psi(x)},$ and deduce that this model is also an accelerated life model if and only if
+  $$
+\log \psi(x)+G(\tau)=G\{\tau+\log \chi(x)\}
+$$
+where $G(\tau)=\log \left\{-\log \mathcal{F}\left(e^{\tau}\right)\right\} .$ Show that if this holds for all $\tau$ and some non-unit $\chi(x)$ we must have $G(\tau)=\kappa \tau+\alpha,$ for constants $\kappa$ and $\alpha,$ and find an expression for $\chi(x)$ in terms of $\psi(x) .$ Hence or otherwise show that the classes of proportional hazards and accelerated life models coincide if and only if $Y$ has a Weibull distribution.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.8.3}
+  In the usual notation for a linear regression model, $X^{\mathrm{T}}(y-X \widehat{\beta})=0 .$ By writing the partial likelihood corresponding to (10.62) as $\sum_{j=1}^{n} d_{j}\left\{x_{j}^{\mathrm{T}} \beta-\log A_{j}(\beta)\right\},$ show that
+$$
+\sum_{j=1}^{n} x_{j}\left\{d_{j}-\exp \left(x_{j}^{\mathrm{T}} \widehat{\beta}\right) \widehat{H}_{0}\left(y_{j}\right)\right\}=0
+$$
+Which type of residual for a proportional hazards model is analogous to the raw residual in a linear model?
+
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Problem3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{problem}{10.8.5}
+  Write down the partial likelihood contributions from failure times $y=1,2,$ for the data in Table $10.22,$ using the model $\xi=\exp \left\{\beta_{0}+\beta_{1} I(\text { Group }=1)+\beta_{2} x\right\}$
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\noindent\rule{7in}{2.8pt}
+
+
+\end{document}
